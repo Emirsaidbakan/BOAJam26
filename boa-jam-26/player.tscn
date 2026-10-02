@@ -109,8 +109,7 @@ animations = [{
 radius = 12.0
 height = 36.0
 
-[node name="Player" type="Area2D" unique_id=436240040]
-position = Vector2(-2, 1)
+[node name="Player" type="CharacterBody2D" unique_id=383054240]
 script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
 
@@ -121,3 +120,6 @@ animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=333655519]
 shape = SubResource("CapsuleShape2D_iq4oy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1771838910]
+zoom = Vector2(2, 2)
