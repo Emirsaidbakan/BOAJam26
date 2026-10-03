@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dryqvsvub7uvs"]
+
+[ext_resource type="FontFile" uid="uid://55kx0rplfl3c" path="res://Dialogue/DialogueBalloon/NewRocker-Regular.ttf" id="1_tstsc"]
+
+[sub_resource type="Theme" id="Theme_htemk"]
+default_font = ExtResource("1_tstsc")
+default_font_size = 72
+
+[node name="Node2D" type="Node2D" unique_id=775685755]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1058061000]
+offset_left = 193.0
+offset_right = 876.0
+offset_bottom = 715.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2133066744]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1925919883]
+layout_mode = 2
+theme = SubResource("Theme_htemk")
+text = "Records"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=609168325]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]John Dedd[/b]
+My late husband. He was a patient man. He had gone into a lot of debt recently that was eating away at him.
+
+[b]Crystal Dedd[/b]
+Next in line as the owner/CEO of the family business. Seems sad about her brother's death.
+ 
+[b]Fred Dedd[/b]
+Entrepreneur. John took a big loan from Fred quite a few months ago but still had not returned it. Seems sad about his brother's death. 
+
+[b]Almas Dedd[/b]
+ Next in line as the owner/CEO of the family business. Seems sad about her brother's death. 
+
+[b]Bayati Hünkarbey[/b]
+Closest to John. John came to him with all his problems. Very wise. Patient. He seems very sad about John’s death. 
+
+[b]Carlo Wride[/b]
+Quiet old shady man. Didn’t seem to care. 
+
+[b]Jeremy Sauber[/b]
+Ex-drug addict. Did rehab. Clean now. Him and John always have the best time together. Seems neutral about the death though. His relationship with John has always been close but simultaneously weird."
+fit_content = true
