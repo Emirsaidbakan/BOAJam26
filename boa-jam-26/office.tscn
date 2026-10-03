@@ -4033,6 +4033,19 @@ physics_layer_0/collision_layer = 16
 sources/0 = SubResource("TileSetAtlasSource_43ocd")
 sources/1 = SubResource("TileSetAtlasSource_lcnwv")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2uxut"]
+texture = ExtResource("2_43ocd")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4ltcl"]
+sources/0 = SubResource("TileSetAtlasSource_2uxut")
+
 [node name="Office" type="Node2D" unique_id=1444373539]
 script = ExtResource("1_knsl5")
 
@@ -4056,7 +4069,7 @@ tile_map_data = PackedByteArray("AAACAP7/AAASAAkAAAACAAEAAAAVAAIAAAACAAIAAAAVAAM
 tile_set = SubResource("TileSet_1sgkr")
 
 [node name="ObjectLayer" type="TileMapLayer" parent="." unique_id=1178104374]
-tile_map_data = PackedByteArray("AAD+//n/AAAaAAsAAAD+//r/AAAaAAwAAAD///n/AAAbAAsAAAD///r/AAAbAAwAAAD//wAAAAARAAcAAAD//wEAAAARAAgAAAAAAAAAAAASAAcAAAAAAAEAAAASAAgAAAD///7/AAARAAYAAAD/////AAARAAcAAAAAAP7/AAASAAYAAAAAAP//AAASAAcAAAD9//7/AAAQAAYAAAD9////AAAQAAcAAAD+//7/AAARAAYAAAD+////AAARAAcAAAD9/wAAAAAQAAcAAAD9/wEAAAAQAAgAAAD+/wAAAAARAAcAAAD+/wEAAAARAAgAAAD7//r/AQAJAAgAAAD7//v/AQAJAAkAAAACAP7/AgAAAAAAAAACAP//AgAAAAEAAAACAAAAAgAAAAIAAAADAPr/AAAIAAoAAAADAPv/AAAIAAsAAAAEAPr/AAAJAAoAAAAEAPv/AAAJAAsAAAABAPr/AAAIAAoAAAABAPv/AAAIAAsAAAACAPr/AAAJAAoAAAACAPv/AAAJAAsAAAADAP3/AAAOAAwAAAAEAP3/AAAPAAwAAAABAP3/AAAOAAwAAAACAP3/AAAPAAwAAAAEAPz/AAAPAAgAAAADAP//AAAPAAgAAAACAAQAAwABAAcAAGADAAQAAwABAAYAAGAEAAQAAwABAAcAAGABAAQAAwABAAYAAGD7//z/AAANAAoAAAACAAEAAAAYAA4AAAACAAIAAAAYAA8AAAADAAIAAAAZAA8AAAADAAAAAAAPAAgAAAADAAEAAAAPAAkAAAD8//n/AAAKAAwAAAD8//r/AAAKAA0AAAD9//n/AAALAAwAAAD9//r/AAALAA0AAAD8//v/AAAQAAkAAAD8//z/AAAQAAoAAAD8/wIAAAAKAAQAAAD8/wMAAAAKAAUAAAD9/wIAAAALAAQAAAD9/wMAAAALAAUAAAD+/wIAAAAPAAgAAAD+/wMAAAAPAAgAAAD8/wQAAAAPAAkAAAD9/wQAAAAPAAkAAAD7/wIAAAAPAAYAAAD7/wMAAAAPAAYAAAD+//v/AAAGAAIAAAD///v/AAAHAAIAAAA=")
+tile_map_data = PackedByteArray("AAD+//n/AAAaAAsAAAD+//r/AAAaAAwAAAD///n/AAAbAAsAAAD///r/AAAbAAwAAAD//wAAAAARAAcAAAD//wEAAAARAAgAAAAAAAAAAAASAAcAAAAAAAEAAAASAAgAAAD///7/AAARAAYAAAD/////AAARAAcAAAAAAP7/AAASAAYAAAAAAP//AAASAAcAAAD9//7/AAAQAAYAAAD9////AAAQAAcAAAD+//7/AAARAAYAAAD+////AAARAAcAAAD9/wAAAAAQAAcAAAD9/wEAAAAQAAgAAAD+/wAAAAARAAcAAAD+/wEAAAARAAgAAAD7//r/AQAJAAgAAAD7//v/AQAJAAkAAAACAP7/AgAAAAAAAAACAP//AgAAAAEAAAACAAAAAgAAAAIAAAADAPr/AAAIAAoAAAADAPv/AAAIAAsAAAAEAPr/AAAJAAoAAAAEAPv/AAAJAAsAAAABAPr/AAAIAAoAAAABAPv/AAAIAAsAAAACAPr/AAAJAAoAAAACAPv/AAAJAAsAAAADAP3/AAAOAAwAAAAEAP3/AAAPAAwAAAABAP3/AAAOAAwAAAACAP3/AAAPAAwAAAAEAPz/AAAPAAgAAAADAP//AAAPAAgAAAADAAQAAwABAAYAAGAEAAQAAwABAAcAAGD7//z/AAANAAoAAAACAAEAAAAYAA4AAAACAAIAAAAYAA8AAAADAAIAAAAZAA8AAAADAAAAAAAPAAgAAAADAAEAAAAPAAkAAAD8//n/AAAKAAwAAAD8//r/AAAKAA0AAAD9//n/AAALAAwAAAD9//r/AAALAA0AAAD8//v/AAAQAAkAAAD8//z/AAAQAAoAAAD8/wIAAAAKAAQAAAD8/wMAAAAKAAUAAAD9/wIAAAALAAQAAAD9/wMAAAALAAUAAAD+/wIAAAAPAAgAAAD+/wMAAAAPAAgAAAD8/wQAAAAPAAkAAAD9/wQAAAAPAAkAAAD7/wIAAAAPAAYAAAD7/wMAAAAPAAYAAAD+//v/AAAGAAIAAAD///v/AAAHAAIAAAA=")
 tile_set = SubResource("TileSet_hsito")
 
 [node name="BoundaryLayer" type="TileMapLayer" parent="." unique_id=1266874315]
@@ -4095,7 +4108,8 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
 dialogue_resource = ExtResource("12_knsl5")
-dialogue_title = "body"
+dialogue_title = "papers"
+interactionId = "papers"
 
 [node name="CollisionShape2D" parent="Papers" index="0" unique_id=224680260]
 position = Vector2(27.089338, -0.57636666)
@@ -4104,10 +4118,31 @@ scale = Vector2(0.9, 0.9)
 [node name="Sprite2D" parent="Papers" index="1" unique_id=2085290654]
 position = Vector2(27.665709, -12.680112)
 scale = Vector2(0.6, 0.6)
-[editable path="DeadMan/Interactable"]
-[node name="Interactable" parent="." unique_id=938960534 instance=ExtResource("11_70x1r")]
-[editable path="Papers"]
 
 [node name="SecretToOffice" type="Marker2D" parent="." unique_id=811533682]
 position = Vector2(31, 61)
->>>>>>> Stashed changes
+
+[node name="Dirt" parent="." unique_id=1768561593 instance=ExtResource("11_70x1r")]
+position = Vector2(-16.000004, -3.8146973e-06)
+scale = Vector2(1.735, 1.735)
+dialogue_resource = ExtResource("12_knsl5")
+dialogue_title = "dirt"
+interactionId = "dirt"
+
+[node name="CollisionShape2D" parent="Dirt" index="0" unique_id=224680260]
+position = Vector2(-18.443802, -53.602303)
+scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" parent="Dirt" index="1" unique_id=2085290654]
+position = Vector2(-18.4438, -64.553314)
+scale = Vector2(0.6, 0.6)
+
+[node name="SecretDoor" type="TileMapLayer" parent="." unique_id=1457112217]
+tile_map_data = PackedByteArray("AAABAAQAAAADAAEAAAACAAQAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_4ltcl")
+
+[node name="DeskLayer" type="TileMapLayer" parent="." unique_id=404244667]
+
+[editable path="DeadMan/Interactable"]
+[editable path="Papers"]
+[editable path="Dirt"]

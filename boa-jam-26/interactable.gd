@@ -2,6 +2,7 @@ extends Area2D
 
 @export var dialogue_resource: DialogueResource
 @export var dialogue_title: String = "start"
+@export var interactionId: String = ""
 
 @onready var prompt = $Sprite2D 
 
@@ -25,4 +26,5 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_in_range and event.is_action_pressed("interact"):
+		SceneManager.interacted.emit(interactionId)
 		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title)
