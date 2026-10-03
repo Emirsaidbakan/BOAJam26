@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dj3leq33x7qrs"]
 
-[ext_resource type="Texture2D" uid="uid://baw1ulec3yfdt" path="res://art/TileSet/S Frisk - Fantasy Interior Tileset/cover.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://baw1ulec3yfdt" path="res://art/BackgroundAssets/S Frisk - Fantasy Interior Tileset/cover.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="3_h2yge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
