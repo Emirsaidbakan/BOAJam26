@@ -74,11 +74,13 @@ Annie: There's a button.
 	Annie: ...
 	Annie: The portrait moved.
 	Annie: There's a passage behind it.
+	do SceneManager.setDirtFound()
 	do SceneManager.incrementCluesFound()
 	=> END
 
 - Leave it alone
 	Annie: I should investigate the rest of the room first.
+	=> END
 
 ~ passage
 Annie: A secret passage...

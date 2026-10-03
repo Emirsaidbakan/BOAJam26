@@ -4109,7 +4109,8 @@ position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
 dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "papers"
-interactionId = "papers"
+interactionId = "inspectedPapers"
+one_time_only = true
 
 [node name="CollisionShape2D" parent="Papers" index="0" unique_id=224680260]
 position = Vector2(27.089338, -0.57636666)
@@ -4127,7 +4128,7 @@ position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
 dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "dirt"
-interactionId = "dirt"
+one_time_only = true
 
 [node name="CollisionShape2D" parent="Dirt" index="0" unique_id=224680260]
 position = Vector2(-18.443802, -53.602303)

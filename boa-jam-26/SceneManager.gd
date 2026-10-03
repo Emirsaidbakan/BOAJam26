@@ -48,14 +48,19 @@ func _on_interacted(id: String) -> void:
 			if not flags["deadmanFound"]:
 				flags["deadmanFound"] = true
 				print("Found the body")
-		"papers":
+		"inspectedPapers":
 			flags["inspectedPapers"] = true
-		"dirt":
+		"dirtFound":
 			flags["dirtFound"] = true
 		"secretDoorFirstTime":
 			flags["inspectedSecretDoor"] = true
 		_:
 			print("Unknown interactable: ", id)
+			
+func setDirtFound() -> void:
+	SceneManager.interacted.emit("dirtFound")
+	
+	
 func incrementCluesFound():
 	flags["cluesFound"] += 1
 
