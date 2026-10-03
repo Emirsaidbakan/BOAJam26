@@ -42,19 +42,17 @@ func show_suspect_choice() -> void:
 func wrong_guess() -> void:
 	loop_number += 1
 	clue_count = 0
-
 	if time > 2.5:
 		time -= 1.0
 		print("WRONG GUESS")
+		print("LOOP: ", loop_number)
 		print("ANNIE WAKES UP AT ", get_time_text())
 	else:
-		print("FINAL WRONG GUESS")
-
+		print("NO MORE LOOPS")
 
 func correct_guess() -> void:
-	loop_number += 1
-	clue_count = 0
-	time = 1.5
-
 	print("CORRECT GUESS")
-	print("ANNIE WAKES UP AT ", get_time_text())
+	print("ANNIE WAKES UP AT 1:30 AM")
+
+	time = 1.5
+	clue_count = 0
