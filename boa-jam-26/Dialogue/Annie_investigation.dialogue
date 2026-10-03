@@ -75,14 +75,42 @@ Annie: There's a button.
 	Annie: The portrait moved.
 	Annie: There's a passage behind it.
 	do SceneManager.incrementCluesFound()
-	=> END
+	=> portrait_choice
 
 - Leave it alone
 	Annie: I should investigate the rest of the room first.
 
+~ portrait_choice 
+Annie: Someone could have used this to get in or out without using the office door. 
+- Go into the passage 
+    Annie: I need to see where this leads. 
+	=> passage 
+- Stay in the office 
+    Annie: I don't know what's waiting for me in there. 
+	Annie: I'll come back to it later. 
+	=> END
+	
 ~ passage
-Annie: A secret passage...
-Annie: Someone could have used this to get in or out without using the office door.
+Annie: It's completely dark... 
+Annie: I can barely see where I'm going. 
+Annie: Wait. 
+Annie: What's that? 
+Annie: A diary. 
+Annie: The cover says... 
+Annie: "Dedd." 
+Annie: Someone in the family wrote this. 
+Annie: I should read it. 
+=> diary 
+
+~ diary 
+Annie: ... 
+Annie: They're furious with John. 
+Annie: They blame him for what happened to them. 
+Annie: ... 
+Annie: They lost their job. 
+Annie: Whoever wrote this had a serious reason to hate him.
+do SceneManager.incrementCluesFound()
+=> END 
 
 ~ leave_office
 
@@ -269,3 +297,24 @@ Annie: Crystal...
 Annie: I need to find out what happened.
 do correct_guess()
 => END
+
+~ jeremy_leaving
+Annie: Jeremy?!
+Annie: Where the hell are you going?
+Annie: It's the middle of the night.
+Jeremy: I know.
+Annie: You were leaving the house.
+Annie: Why?
+Jeremy: John found out.
+Annie: Found out what?
+Jeremy: ...
+Jeremy: I'm using again.
+Annie: ...
+Jeremy: He knew I was taking drugs again.
+Jeremy: I couldn't face him.
+Annie: So you were just going to leave?
+Jeremy: I didn't know what else to do.
+Jeremy: I can't deal with this right now.
+do SceneManager.incrementCluesFound()
+=> END
+
