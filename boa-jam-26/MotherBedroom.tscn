@@ -1,0 +1,34 @@
+[gd_scene format=4 uid="uid://c1rsa751r3v17"]
+
+[ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="1_mnix7"]
+[ext_resource type="Texture2D" uid="uid://d4lhcds40fl71" path="res://art/BackgroundAssets/Beds/Beds.png" id="1_xsrff"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rys6w"]
+texture = ExtResource("1_xsrff")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xsrff"]
+sources/0 = SubResource("TileSetAtlasSource_rys6w")
+
+[node name="MotherBedroom" type="Node2D" unique_id=203650477]
+
+[node name="ObjectsLayer" type="TileMapLayer" parent="." unique_id=319112780]
+tile_map_data = PackedByteArray("AAD9////AAABAAAAAAD9/wAAAAABAAEAAAD+////AAACAAAAAAD+/wAAAAACAAEAAAD7////AAABAAAAAAD7/wAAAAABAAEAAAD8////AAACAAAAAAD8/wAAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_xsrff")
+
+[node name="Player" parent="." unique_id=383054240 instance=ExtResource("1_mnix7")]
+
+[node name="WallLayer" type="TileMapLayer" parent="." unique_id=1269016353]
+
+[node name="WallLayer3" type="TileMapLayer" parent="." unique_id=2028422531]
