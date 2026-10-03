@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dkcgg1agj36u6" path="res://art/stairway.png" id="3_pgiwe"]
 [ext_resource type="Texture2D" uid="uid://brjgsk0lud286" path="res://art/Doors/All door sides.png" id="4_6brk7"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="5_70oee"]
+[ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="6_3l3xy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4uim"]
 texture = ExtResource("1_nnhyr")
@@ -5018,11 +5019,11 @@ sources/2 = SubResource("TileSetAtlasSource_380ix")
 
 [node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1129179648]
 z_index = -10
-tile_map_data = PackedByteArray("AAD7//n/AgACAAcAAAD8//n/AgACAAcAAAD9//n/AgACAAcAAAD+//n/AgACAAcAAAD6//j/AgABAAcAAAD6//n/AgACAAcAAAD7//j/AgABAAcAAAD8//j/AgABAAcAAAD9//j/AgABAAcAAAD+//j/AgABAAcAAAD5//n/AgACAAcAAAD5//j/AgABAAcAAAD4//j/AgABAAcAAAD4//n/AgACAAcAAAA=")
+tile_map_data = PackedByteArray("AAD7//n/AgACAAcAAAD8//n/AgACAAcAAAD9//n/AgACAAcAAAD+//n/AgACAAcAAAD6//j/AgABAAcAAAD6//n/AgACAAcAAAD7//j/AgABAAcAAAD8//j/AgABAAcAAAD9//j/AgABAAcAAAD+//j/AgABAAcAAAD5//n/AgACAAcAAAD5//j/AgABAAcAAAD4//j/AgABAAcAAAD4//n/AgACAAcAAAD///j/AgABAAcAAAD///n/AgACAAcAAAA=")
 tile_set = SubResource("TileSet_qg6b3")
 
 [node name="WallLayer" type="TileMapLayer" parent="." unique_id=689929794]
-tile_map_data = PackedByteArray("AAD4//b/AQAAAAAAAAD4//f/AQAAAAEAAAD5//b/AQAAAAAAAAD5//f/AQAAAAEAAAD6//b/AQAAAAAAAAD6//f/AQAAAAEAAAD7//b/AQAAAAAAAAD7//f/AQAAAAEAAAD8//b/AQAAAAAAAAD8//f/AQAAAAEAAAD9//b/AQAAAAAAAAD9//f/AQAAAAEAAAD+//b/AQAAAAAAAAD+//f/AQAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD4//b/AQAAAAAAAAD4//f/AQAAAAEAAAD5//b/AQAAAAAAAAD5//f/AQAAAAEAAAD6//b/AQAAAAAAAAD6//f/AQAAAAEAAAD7//b/AQAAAAAAAAD7//f/AQAAAAEAAAD8//b/AQAAAAAAAAD8//f/AQAAAAEAAAD9//b/AQAAAAAAAAD9//f/AQAAAAEAAAD+//b/AQAAAAAAAAD+//f/AQAAAAEAAAD///b/AQAAAAAAAAD///f/AQAAAAEAAAA=")
 tile_set = SubResource("TileSet_x4o4w")
 
 [node name="ObjectsLayer" type="TileMapLayer" parent="." unique_id=1194095775]
@@ -5030,9 +5031,19 @@ z_index = 10
 position = Vector2(-7, -20)
 tile_set = SubResource("TileSet_seeke")
 
+[node name="Objects2Layer" type="TileMapLayer" parent="." unique_id=1040725865]
+
 [node name="BoundaryLayer" type="TileMapLayer" parent="." unique_id=1129241880]
-tile_map_data = PackedByteArray("AAD8//j/AAAaAAEAAAD8//n/AAAaAAIAAAD9//f/AAAbAAAAAAD9//j/AAAbAAEAAAD9//n/AAAbAAIAAAD+//f/AAAcAAAAAAD+//j/AAAcAAEAAAD+//n/AAAcAAIAAAD3//b/AAAAAA0AAAD3//f/AAAAAA0AAAD3//j/AAAAAA0AAAD3//n/AAAAAA0AAAD4//r/AAACAA8AAAD5//r/AAACAA8AAAD6//r/AAACAA8AAAD7//r/AAACAA8AAAD8//r/AAACAA8AAAD9//r/AAACAA8AAAD+//r/AAACAA8AAAD///n/AAAEAA0AAAD///j/AAAEAA0AAAD///f/AAAEAA0AAAD///b/AAAEAA0AAAD4//X/AAACAAsAAAD5//X/AAACAAsAAAD6//X/AAACAAsAAAD7//X/AAACAAsAAAD8//X/AAACAAsAAAD9//X/AAACAAsAAAD+//X/AAACAAsAAAD5//b/AAAEAAsAAAD8//b/AAAEAAsAAAA=")
+tile_map_data = PackedByteArray("AAD3//b/AAAAAA0AAAD3//f/AAAAAA0AAAD3//j/AAAAAA0AAAD3//n/AAAAAA0AAAD4//r/AAACAA8AAAD5//r/AAACAA8AAAD6//r/AAACAA8AAAD7//r/AAACAA8AAAD8//r/AAACAA8AAAD9//r/AAACAA8AAAD+//r/AAACAA8AAAD4//X/AAACAAsAAAD5//X/AAACAAsAAAD6//X/AAACAAsAAAD7//X/AAACAAsAAAD8//X/AAACAAsAAAD9//X/AAACAAsAAAD5//b/AAAEAAsAAAD8//b/AAAEAAsAAAAAAPb/AAAEAA0AAAAAAPf/AAAEAA0AAAAAAPj/AAAEAA0AAAAAAPn/AAAEAA0AAAD+//X/AAACAAsAAAD///X/AAACAAsAAAD///r/AAACAA8AAAD9//j/AAAaAAEAAAD9//n/AAAaAAIAAAD+//f/AAAbAAAAAAD+//j/AAAbAAEAAAD+//n/AAAbAAIAAAD///f/AAAcAAAAAAD///j/AAAcAAEAAAD///n/AAAcAAIAAAA=")
 tile_set = SubResource("TileSet_utnt2")
 
 [node name="Player" parent="." unique_id=383054240 instance=ExtResource("5_70oee")]
-position = Vector2(-109, -121)
+position = Vector2(-66, -119)
+
+[node name="LoungeToStairs" type="Marker2D" parent="." unique_id=540527190]
+position = Vector2(-105, -116)
+
+[node name="SideDoor" parent="." unique_id=2125966249 instance=ExtResource("6_3l3xy")]
+position = Vector2(-119, -123)
+target_scene = "uid://d2sv8vhhodeuf"
+spawnDestination = "StairsToLounge"
