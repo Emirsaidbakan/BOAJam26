@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BOA game jam"
-run/main_scene="uid://dj3leq33x7qrs"
+run/main_scene="uid://bmhtbn0lbucjn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
