@@ -76,6 +76,7 @@ Annie: There's a button.
 	Annie: There's a passage behind it.
 	do SceneManager.setDirtFound()
 	do SceneManager.incrementCluesFound()
+	do removeInteractable()
 	=> END
 
 - Leave it alone
