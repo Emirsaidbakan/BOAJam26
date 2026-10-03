@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bmhtbn0lbucjn"]
 
 [ext_resource type="FontFile" uid="uid://55kx0rplfl3c" path="res://Dialogue/DialogueBalloon/NewRocker-Regular.ttf" id="1_eiy7p"]
-[ext_resource type="Texture2D" uid="uid://bdahl15dgr4x0" path="res://BG.png" id="1_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://bdahl15dgr4x0" path="res://art/BG.png" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://ciss82p802qsp" path="res://Dialogue/DialogueBalloon/Grenze-Medium.ttf" id="2_h7a2f"]
 [ext_resource type="Script" uid="uid://bxh56mi0lfuld" path="res://StartButton.gd" id="4_qoqlk"]
 
