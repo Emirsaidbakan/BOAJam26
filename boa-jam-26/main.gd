@@ -1,7 +1,7 @@
 extends Node2D
 
 var time = 4.5
-
+var inspected_papers = false
 
 func _ready() -> void:
 	print("ANNIE WAKES UP AT 4:30 AM")
@@ -25,3 +25,7 @@ func correct_guess() -> void:
 	time = 1.5
 	print("CORRECT GUESS")
 	print("ANNIE WAKES UP AT ", get_time_text())
+	
+func inspect_papers() -> void:
+	inspected_papers = true
+	print("PAPERS INSPECTED")

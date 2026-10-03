@@ -61,7 +61,7 @@ Annie: He lost shares of one of the company's biggest stakeholders.
 Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
-
+do inspect_papers()
 => scene1
 
 ~ dirt
@@ -166,7 +166,6 @@ Mother: ...
 Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
-
 => leave_office
 
 ~ crystal_door
