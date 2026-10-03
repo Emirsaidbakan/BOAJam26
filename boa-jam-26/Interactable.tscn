@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2o1h85svhm00"]
 
 [ext_resource type="Script" uid="uid://bdry4ov1lwtbe" path="res://interactable.gd" id="1_msfch"]
-[ext_resource type="FontFile" uid="uid://rbxtw8sn1r8e" path="res://fonts/ARCADECLASSIC.TTF" id="2_ojdgt"]
+[ext_resource type="Texture2D" uid="uid://c5ttl6o1j4p3u" path="res://art/E.png" id="2_ojdgt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ltcl"]
 radius = 13.0
@@ -12,13 +12,6 @@ script = ExtResource("1_msfch")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=224680260]
 shape = SubResource("CircleShape2D_4ltcl")
 
-[node name="Label" type="Label" parent="." unique_id=402763923]
-texture_filter = 2
-offset_left = -5.0
-offset_top = -4.0
-offset_right = 17.0
-offset_bottom = 3.0
-theme_override_fonts/font = ExtResource("2_ojdgt")
-theme_override_font_sizes/font_size = 4
-text = "[E] Interact"
-clip_text = true
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2085290654]
+position = Vector2(0, -20)
+texture = ExtResource("2_ojdgt")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c4xo1pet8m5wa"
+path="res://.godot/imported/Deadman.dialogue-a80d9972b9cef3cfce5a35632ee49b75.tres"
+
+[deps]
+
+source_file="res://Dialogue/Deadman.dialogue"
+dest_files=["res://.godot/imported/Deadman.dialogue-a80d9972b9cef3cfce5a35632ee49b75.tres"]
+
+[params]
+
+defaults=true

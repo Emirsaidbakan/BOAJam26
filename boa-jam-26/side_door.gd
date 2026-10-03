@@ -4,7 +4,6 @@ extends Area2D
 @export var spawnDestination: String
 
 func _ready() -> void:
-	# Automatically connects the body_entered signal when the scene starts
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:

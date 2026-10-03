@@ -3,21 +3,26 @@ extends Area2D
 @export var dialogue_resource: DialogueResource
 @export var dialogue_title: String = "start"
 
+@onready var prompt = $Sprite2D 
+
 var player_in_range = false
 
+func _ready() -> void:
+	prompt.hide()
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
 func _on_body_entered(body: Node2D) -> void:
+	print("entered: ", body.name)
 	if body.is_in_group("player"):
 		player_in_range = true
-		$Label.show()
+		prompt.show()
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
-		$Label.hide()
+		prompt.hide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_in_range and event.is_action_pressed("interact"):
-		interact()
-
-func interact() -> void:
-	DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title)
+		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title)
