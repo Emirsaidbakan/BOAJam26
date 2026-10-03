@@ -42,3 +42,5 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.animation = "up"
 	else:
 		$AnimatedSprite2D.stop()
+	if Input.is_action_just_pressed("interact"):
+		print("E PRESSED")

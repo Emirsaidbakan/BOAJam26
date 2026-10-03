@@ -1,0 +1,103 @@
+~ start
+Annie: What the hellie?
+Annie: I need to find out what happened.
+- Investigate the dirt on the floor
+	Annie: There's something strange about this dirt...
+	=> dirt
+- Investigate the papers on the table
+	Annie: These papers might tell me something.
+- Investigate the body
+	Annie: Oh God...
+- Leave the office
+	Annie: I need to look somewhere else.
+
+~ dirt
+Annie: Wait a minute. Where did this come from?
+Annie: There is a suspicious button at the bottom of this portrait! 
+- Press the button
+	Annie: ...
+	Annie: The portrait moved.
+	Annie: There's a passage behind it.
+	=> passage
+	
+~ passage
+Annie: A secret passage...
+Annie: So that's how someone could have gotten in and out without using the door.
+Annie: This must connect somewhere in the house. 
+- Continue through the passage
+	=> diary
+- Go back
+	=> start
+
+~ diary
+Annie: What's this?
+Annie: A diary...
+Annie: "Dedd."
+Annie: So it belongs to someone in the family. 
+- Read the diary
+	Annie: ...
+	Annie: They're furious about John's financial decisions.
+	Annie: And... They lost their side job?
+	=> diary_read
+
+~ diary_read
+Annie: There are several entries about John.
+Annie: She clearly couldn't stand what he was doing to the family.
+- Close the diary
+	Annie: I need to investigate the rest of the house.
+	=> start
+
+- Continue investigating
+	Annie: I need to check the other evidence.
+	=> evidence
+
+~ evidence
+Annie: What should I investigate next?
+- Check the papers
+	Annie: These papers... there's something important here.
+	=> papers
+- Examine the body
+	Annie: There has to be something on the body.
+	=> body
+	
+~ papers
+Annie: There's a strange note hidden between the papers.
+Annie: Someone was trying to hide something.
+=> evidence2
+
+~ body
+Annie: There's a mark on his hand.
+Annie: He was holding onto something before he died.
+=> evidence2
+
+~ evidence2
+Annie: I've found enough evidence.
+Annie: I need to figure out who did this.
+- Accuse the person responsible
+	Annie: I know who killed him.
+	=> accusation
+	
+~ accusation
+Annie: Who killed my husband?
+- Fred
+	Annie: It was Fred.
+	=> wrong
+- Jeremy
+	Annie: It was Jeremy.
+	=> correct
+- Mom
+	Annie: It was Mom.
+	=> wrong
+	
+~ correct
+Annie: I know what I have to do.
+Annie: I need to sleep... and wake up at 1:30.
+Annie: The moment she wakes up, Annie rushes to the office.
+Annie: She gets there before the murder happens.
+Annie: She saves her husband.
+=> END
+
+~ wrong
+Annie: No... I was wrong.
+Annie: I have to sleep and try again.
+=> END 
