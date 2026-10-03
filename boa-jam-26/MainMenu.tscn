@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bywvt3x36dwjm" path="res://main_menu.gd" id="1_iwfq2"]
 [ext_resource type="FontFile" uid="uid://ciss82p802qsp" path="res://Dialogue/DialogueBalloon/Grenze-Medium.ttf" id="2_h7a2f"]
 [ext_resource type="Script" uid="uid://bxh56mi0lfuld" path="res://StartButton.gd" id="4_qoqlk"]
+[ext_resource type="AudioStream" uid="uid://cqcgt36aoqa4f" path="res://MainMenu.mp3" id="5_iwfq2"]
 
 [sub_resource type="Theme" id="Theme_htemk"]
 default_font = ExtResource("1_eiy7p")
@@ -41,3 +42,9 @@ size_flags_horizontal = 4
 theme = SubResource("Theme_14cdr")
 text = "Start Game"
 script = ExtResource("4_qoqlk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=68459469]
+stream = ExtResource("5_iwfq2")
+autoplay = true
+playback_type = 1
+parameters/looping = true

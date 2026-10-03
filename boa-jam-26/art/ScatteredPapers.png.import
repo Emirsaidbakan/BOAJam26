@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cau5jl5qgjvgg"
-path="res://.godot/imported/4.png-2027b348de4cdb0ddcfe3771ecf041f8.ctex"
+uid="uid://ide2a26wv0i6"
+path="res://.godot/imported/ScatteredPapers.png-6a0b6c6eef338fdcf9930993d07d8eff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Soldier1/Walking/4.png"
-dest_files=["res://.godot/imported/4.png-2027b348de4cdb0ddcfe3771ecf041f8.ctex"]
+source_file="res://art/ScatteredPapers.png"
+dest_files=["res://.godot/imported/ScatteredPapers.png-6a0b6c6eef338fdcf9930993d07d8eff.ctex"]
 
 [params]
 
