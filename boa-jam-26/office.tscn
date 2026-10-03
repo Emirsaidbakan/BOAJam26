@@ -4021,8 +4021,9 @@ tile_map_data = PackedByteArray("AAD6//n/AAAAAA0AAAD6//r/AAAAAA0AAAD6//v/AAAAAA0
 tile_set = SubResource("TileSet_43ocd")
 
 [node name="Player" parent="." unique_id=383054240 instance=ExtResource("2_ei2s5")]
-position = Vector2(-58, -4)
+position = Vector2(-70, 1)
 
 [node name="SideDoor" parent="." unique_id=2125966249 instance=ExtResource("4_hsito")]
 position = Vector2(-72, -9)
 target_scene = "uid://bcf4b7s1xycpc"
+spawnDestination = "OfficeToHall"
