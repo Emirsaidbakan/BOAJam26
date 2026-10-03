@@ -1,15 +1,15 @@
 extends Area2D
 
 @export_file("*.tscn") var target_scene: String
-@export var spawnDestination: String
+@export var targetMarker: String
 
 func _ready() -> void:
 	# Automatically connects the body_entered signal when the scene starts
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D:
-		if target_scene != "":
-			SceneManager.change_room(target_scene, spawnDestination)
-		else:
-			print("Warning: Target scene not set on this door!")
+	if body is CharacterBody2D and target_scene != "":
+		SceneManager.spawnDestination = targetMarker
+		get_tree().change_scene_to_file(target_scene)
+	else:
+		print("Warning: Target scene not set on this door!")
