@@ -3986,7 +3986,7 @@ tile_map_data = PackedByteArray("AAAAAPz/AAAVAAIAAGAAAPv/AAAWAAIAAGABAPz/AAAVAAM
 tile_set = SubResource("TileSet_7w07i")
 
 [node name="SecretToHall" type="Marker2D" parent="." unique_id=1764346459]
-position = Vector2(-42, 38)
+position = Vector2(-42, 39)
 
 [node name="ObjectsLayer3" type="TileMapLayer" parent="." unique_id=222449692]
 tile_map_data = PackedByteArray("AAAAAPz/AAAVAAIAAGAAAPv/AAAWAAIAAGABAPz/AAAPAAgAAAABAPv/AAAWAAMAAGD5//z/AAAPAAYAAAD5//v/AAAVAAMAAFD6//z/AAAWAAIAAFD6//v/AAAVAAIAAFD///b/AAATAAMAAAD6/wIAAAATAAMAAAAAAAIAAAATAAMAAAA=")

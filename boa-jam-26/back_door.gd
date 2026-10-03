@@ -9,7 +9,6 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and target_scene != "":
-		SceneManager.spawnDestination = targetMarker
-		get_tree().change_scene_to_file(target_scene)
+		SceneManager.change_room(target_scene, targetMarker)
 	else:
 		print("Warning: Target scene not set on this door!")
