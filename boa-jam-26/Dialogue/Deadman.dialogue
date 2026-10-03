@@ -1,5 +1,5 @@
 ~ start
-Annie: Annie: John?
+Annie: John?
 Annie: ...
 Annie: Oh my God...
 Annie: John!
@@ -23,11 +23,5 @@ Annie: I need to figure out what happened.
 
 
 Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
-=> END
+- Investigate the body
+	

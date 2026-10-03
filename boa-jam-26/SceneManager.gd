@@ -1,5 +1,10 @@
 extends Node
 
+var flags: Dictionary = {
+	"deadmanFound": false,
+	"inspectedPapers": false
+}
+
 # Holds the name of the Marker2D node the player should spawn at
 var spawnDestination: String = ""
 

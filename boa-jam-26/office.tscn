@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://blfs4t8it75li"]
 
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="1_g3mwp"]
+[ext_resource type="Script" uid="uid://dynu0howsfgyo" path="res://office.gd" id="1_knsl5"]
 [ext_resource type="Texture2D" uid="uid://brjgsk0lud286" path="res://art/Doors/All door sides.png" id="2_43ocd"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="2_ei2s5"]
 [ext_resource type="Texture2D" uid="uid://0vhmrd6xrhh7" path="res://art/tiles and items.png" id="2_hsito"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2n8j74rhagc2" path="res://art/Sideways desk and shelf (2).png" id="4_4i814"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="11_70x1r"]
+[ext_resource type="Resource" uid="uid://c4xo1pet8m5wa" path="res://Dialogue/Deadman.dialogue" id="11_knsl5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_g3mwp")
@@ -4032,6 +4034,7 @@ sources/0 = SubResource("TileSetAtlasSource_43ocd")
 sources/1 = SubResource("TileSetAtlasSource_lcnwv")
 
 [node name="Office" type="Node2D" unique_id=1444373539]
+script = ExtResource("1_knsl5")
 
 [node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1089475384]
 tile_map_data = PackedByteArray("AAD/////AAADAAcAAAAAAP//AAADAAcAAAABAP//AAADAAcAAAACAP//AAADAAcAAAADAP//AAADAAcAAAADAAAAAAADAAcAAAACAAAAAAADAAcAAAABAAAAAAADAAcAAAAAAAAAAAADAAcAAAD//wAAAAADAAcAAAD+/wAAAAADAAcAAAD+////AAADAAcAAAD9////AAADAAcAAAD9/wAAAAADAAcAAAD9/wEAAAADAAcAAAD+/wEAAAADAAcAAAD//wEAAAADAAcAAAAAAAEAAAADAAcAAAABAAEAAAADAAcAAAACAAEAAAADAAcAAAADAAEAAAADAAcAAAADAAIAAAADAAcAAAACAAIAAAADAAcAAAABAAIAAAADAAcAAAAAAAIAAAADAAcAAAD//wIAAAADAAcAAAD+/wIAAAADAAcAAAD9/wIAAAADAAcAAAD9/wMAAAADAAcAAAD+/wMAAAADAAcAAAD//wMAAAADAAcAAAAAAAMAAAADAAcAAAABAAMAAAADAAcAAAACAAMAAAADAAcAAAADAAMAAAADAAcAAAAEAAMAAAADAAcAAAAEAAIAAAADAAcAAAAEAAEAAAADAAcAAAAEAAAAAAADAAcAAAAEAP//AAADAAcAAAAEAP7/AAADAAcAAAADAP7/AAADAAcAAAACAP7/AAADAAcAAAABAP7/AAADAAcAAAAAAP7/AAADAAcAAAD///7/AAADAAcAAAD+//7/AAADAAcAAAD9//7/AAADAAcAAAD8//7/AAADAAcAAAD8////AAADAAcAAAD8/wAAAAADAAcAAAD8/wEAAAADAAcAAAD8/wIAAAADAAcAAAD8/wMAAAADAAcAAAD8//3/AAADAAcAAAD9//3/AAADAAcAAAD+//3/AAADAAcAAAD///3/AAADAAcAAAAAAP3/AAADAAcAAAABAP3/AAADAAcAAAACAP3/AAADAAcAAAADAP3/AAADAAcAAAAEAP3/AAADAAcAAAD7//3/AAADAAcAAAD7//7/AAADAAcAAAD7////AAADAAcAAAD7/wAAAAADAAcAAAD7/wEAAAADAAcAAAD7/wIAAAADAAcAAAD7/wMAAAADAAcAAAD7//z/AAADAAcAAAD8//z/AAADAAcAAAD9//z/AAADAAcAAAD+//z/AAADAAcAAAD///z/AAADAAcAAAAAAPz/AAADAAcAAAABAPz/AAADAAcAAAACAPz/AAADAAcAAAADAPz/AAADAAcAAAAEAPz/AAADAAcAAAD7/wQAAAADAAcAAAD8/wQAAAADAAcAAAD9/wQAAAADAAcAAAD+/wQAAAADAAcAAAD//wQAAAADAAcAAAAAAAQAAAADAAcAAAACAAQAAAADAAcAAAABAAQAAAADAAcAAAADAAQAAAADAAcAAAAEAAQAAAADAAcAAAD7//v/AAADAAcAAAD8//v/AAADAAcAAAD9//v/AAADAAcAAAD+//v/AAADAAcAAAD///v/AAADAAcAAAAAAPv/AAADAAcAAAABAPv/AAADAAcAAAACAPv/AAADAAcAAAADAPv/AAADAAcAAAAEAPv/AAADAAcAAAA=")
@@ -4081,6 +4084,7 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Interactable" parent="DeadMan" unique_id=938960534 instance=ExtResource("11_70x1r")]
 position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
+dialogue_resource = ExtResource("11_knsl5")
 
 [node name="Sprite2D" parent="DeadMan/Interactable" index="1" unique_id=2085290654]
 position = Vector2(0, -13.195)
