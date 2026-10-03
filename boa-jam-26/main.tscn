@@ -3963,3 +3963,6 @@ tile_set = SubResource("TileSet_4c57u")
 position = Vector2(-55, -56)
 target_scene = "uid://d1ppn8xr8sx2q"
 spawnDestination = "BedroomToFirstFloor"
+
+[node name="DayEnd" type="Marker2D" parent="." unique_id=46316398]
+position = Vector2(48, -47)

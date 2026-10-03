@@ -4,10 +4,16 @@ signal interacted(id: String)
 
 var flags: Dictionary = {
 	"cluesFound": 0,
+	"sleep": false,
 	"deadmanFound": false,
 	"inspectedPapers": false,
 	"dirtFound": false,
-	"inspectedSecretDoor": false
+	"inspectedSecretDoor": false,
+	"day": 0,
+	"talkedWithButler": false,
+	"talkedWithDriver": false,
+	"talkedWithMother": false
+	
 	
 }
 
@@ -59,10 +65,30 @@ func _on_interacted(id: String) -> void:
 			
 func setDirtFound() -> void:
 	SceneManager.interacted.emit("dirtFound")
+	openSecretPassage()
+	
+func openSecretPassage() -> void:
+	$office/DeskLayer.global_position.x -= 10
+	print("Done")
 	
 	
 func incrementCluesFound():
 	flags["cluesFound"] += 1
+	if flags["cluesFound"] == 3:
+		flags["cluesFound"] = 0
+		endDay()
+			
+func endDay() -> void:
+	flags["day"] += 1
+	sleep()
+	
+func sleep() -> void:
+	await change_room("res://main.tscn", "DayEnd")
+	var door = get_tree().current_scene.get_node_or_null("SideDoor")
+	if door:
+		door.hide()
+	
+	
 
 func change_room(scene_path: String, spawn_id: String) -> void:
 	if isChangingRoom:
