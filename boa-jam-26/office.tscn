@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="11_70x1r"]
 [ext_resource type="Resource" uid="uid://dc7b5iy5w6lo7" path="res://Dialogue/Annie_investigation.dialogue" id="12_knsl5"]
+[ext_resource type="Script" uid="uid://c7excd5mhkb2i" path="res://dirt.gd" id="13_s0aar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_g3mwp")
@@ -4109,7 +4110,8 @@ position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
 dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "papers"
-interactionId = "papers"
+interactionId = "inspectedPapers"
+one_time_only = true
 
 [node name="CollisionShape2D" parent="Papers" index="0" unique_id=224680260]
 position = Vector2(27.089338, -0.57636666)
@@ -4122,27 +4124,25 @@ scale = Vector2(0.6, 0.6)
 [node name="SecretToOffice" type="Marker2D" parent="." unique_id=811533682]
 position = Vector2(31, 61)
 
-[node name="Dirt" parent="." unique_id=1768561593 instance=ExtResource("11_70x1r")]
-position = Vector2(-16.000004, -3.8146973e-06)
-scale = Vector2(1.735, 1.735)
-dialogue_resource = ExtResource("12_knsl5")
-dialogue_title = "dirt"
-interactionId = "dirt"
-
-[node name="CollisionShape2D" parent="Dirt" index="0" unique_id=224680260]
-position = Vector2(-18.443802, -53.602303)
-scale = Vector2(0.9, 0.9)
-
-[node name="Sprite2D" parent="Dirt" index="1" unique_id=2085290654]
-position = Vector2(-18.4438, -64.553314)
-scale = Vector2(0.6, 0.6)
-
 [node name="SecretDoor" type="TileMapLayer" parent="." unique_id=1457112217]
 tile_map_data = PackedByteArray("AAABAAQAAAADAAEAAAACAAQAAAADAAEAAAA=")
 tile_set = SubResource("TileSet_4ltcl")
 
 [node name="DeskLayer" type="TileMapLayer" parent="." unique_id=404244667]
 
+[node name="Dirt" type="Area2D" parent="." unique_id=825593907]
+script = ExtResource("13_s0aar")
+
+[node name="Interactable" parent="Dirt" unique_id=1717753903 instance=ExtResource("11_70x1r")]
+position = Vector2(-48, -91)
+dialogue_resource = ExtResource("12_knsl5")
+dialogue_title = "dirt"
+interactionId = "dirtFound"
+one_time_only = true
+
+[node name="CollisionShape2D" parent="Dirt/Interactable" index="0" unique_id=224680260]
+scale = Vector2(1.46, 1.46)
+
 [editable path="DeadMan/Interactable"]
 [editable path="Papers"]
-[editable path="Dirt"]
+[editable path="Dirt/Interactable"]
