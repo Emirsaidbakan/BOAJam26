@@ -3153,3 +3153,7 @@ collision_mask = 11
 [node name="Door" parent="." unique_id=2081190144 instance=ExtResource("3_jq0fr")]
 position = Vector2(-39, -167)
 target_scene = "uid://d2sv8vhhodeuf"
+spawnDestination = "HallToLounge"
+
+[node name="LoungeToHall" type="Marker2D" parent="." unique_id=355302939]
+position = Vector2(-40, -127)
