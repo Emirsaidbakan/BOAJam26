@@ -77,8 +77,7 @@ Annie: There's a button.
 	do SceneManager.setDirtFound()
 	do SceneManager.incrementCluesFound()
 	do removeInteractable()
-	=> portrait_choice
-
+	=> END
 - Leave it alone
 	Annie: I should investigate the rest of the room first.
 	=> END
