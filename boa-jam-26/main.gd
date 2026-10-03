@@ -45,14 +45,16 @@ func wrong_guess() -> void:
 	if time > 2.5:
 		time -= 1.0
 		print("WRONG GUESS")
-		print("LOOP: ", loop_number)
 		print("ANNIE WAKES UP AT ", get_time_text())
 	else:
-		print("NO MORE LOOPS")
+		time = 1.5
+		print("FINAL LOOP")
+		print("ANNIE WAKES UP AT 1:30 AM")
+		# later: trigger final death sequence
 
 func correct_guess() -> void:
-	print("CORRECT GUESS")
-	print("ANNIE WAKES UP AT 1:30 AM")
-
 	time = 1.5
 	clue_count = 0
+	print("CORRECT GUESS")
+	print("ANNIE WAKES UP AT 1:30 AM")
+	# later: trigger save-John sequence

@@ -3,7 +3,6 @@ Annie: Ugh....What the hell...?
 Annie: I slept horribly...
 Annie: John?
 Annie: John, where are you?
-Annie: 
 Annie: Is he working in his office again?
 => END
 
@@ -104,10 +103,6 @@ Annie: Someone in the family wrote this.
 Annie: I should read it. 
 => diary 
 
-~ sleep
-Annie: I feel sleepy...
-=> END
-
 ~ diary 
 Annie: ... 
 Annie: They're furious with John. 
@@ -129,7 +124,7 @@ do SceneManager.incrementCluesFound()
 - Knock on Crystal's door
 	=> crystal_door
 
-- Check Jeremy's room
+- Knock on Jeremy's room
 	=> jeremy_door
 
 - Go to the living room
@@ -339,3 +334,78 @@ Annie: She lied to me.
 do SceneManager.incrementCluesFound()
 => END
 
+~ mom_fred_choice
+Annie: Mom just left.
+- Talk to Fred
+    => fred
+- Go downstairs
+    => leave_office
+
+~ fred
+Annie: Fred.
+Fred: Annie?
+Fred: What are you doing up here?
+Annie: I heard you talking to Mom.
+Fred: ...
+Annie: I need to ask you something.
+
+if time >= 3.5:
+    Annie: Where were you around 2:00 AM?
+    Fred: I went to Crystal's room.
+    Annie: Why?
+    Fred: I needed to speak with her.
+    Annie: And?
+    Fred: She was...
+    Fred: sweaty.
+    Annie: Sweaty?
+    Fred: Yes.
+    Fred: I thought it was strange.
+    Annie: Did she say anything?
+    Fred: No.
+    Fred: I didn't think much of it at the time.
+
+if met_butler:
+    Annie: You know about the secret passages. I know you use them.
+    Annie: John's office was locked.
+    Annie: Did you use one of the passages to get to him?
+    Fred: What?
+    Fred: No!
+    Fred: I'm not the only one who knows about them.
+    Fred: Someone could be trying to frame me.
+    Fred: I loved John. I would never kill him.
+else:
+    Annie: Did you notice anything strange tonight?
+    Fred: Not really.
+    Fred: I was mostly keeping to myself.
+
+Annie: Do you know anything else?
+Fred: No.
+Fred: I'm telling you everything I know.
+Annie: ...
+=> END
+
+~ crystal_passage 
+Annie: I should check the passage again. 
+Annie: ... Annie: Wait. 
+Annie: Someone's coming. 
+Annie: Crystal?! 
+Annie: What is she doing here? 
+Annie: I need to hide. 
+Crystal: No one should find this. 
+Annie: What is she hiding? 
+Crystal: ... 
+Crystal: There. 
+Annie: She's putting something behind that loose stone. 
+Annie: She's leaving. 
+Annie: ... 
+Annie: I need to see what she hid. 
+=> hidden_diary
+
+~ hidden_diary 
+Annie: A diary. 
+Annie: The cover says... 
+Annie: "Dedd." 
+Annie: ... 
+Annie: This is the same diary I found before. 
+Annie: Crystal was hiding it. 
+Annie: Why?
