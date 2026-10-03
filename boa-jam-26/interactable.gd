@@ -8,6 +8,7 @@ extends Area2D
 @onready var prompt = $Sprite2D
 
 var player_in_range = false
+var player = "res://player.tscn"
 
 func _ready() -> void:
 	prompt.hide()
@@ -28,6 +29,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_in_range and event.is_action_pressed("interact"):
+		get_tree().get_first_node_in_group("player").freeze()
 		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title, [self])
 		
 func removeInteractable() -> void:

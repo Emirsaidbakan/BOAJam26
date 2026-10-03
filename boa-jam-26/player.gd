@@ -1,10 +1,13 @@
 extends CharacterBody2D
 @export var speed = 200
 var screenSize
+var normalSpeed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screenSize = get_viewport_rect().size
+	normalSpeed = speed
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	add_to_group("player")
 	
 	# Check if SceneManager received a marker name from the door
@@ -23,6 +26,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func freeze() -> void:
+	speed = 0
+	
+func _on_dialogue_ended(_resource = null) -> void:
+	speed = normalSpeed
 	
 		
 func _physics_process(delta: float) -> void:

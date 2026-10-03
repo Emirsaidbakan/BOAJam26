@@ -104,6 +104,10 @@ Annie: Someone in the family wrote this.
 Annie: I should read it. 
 => diary 
 
+~ sleep
+Annie: I feel sleepy...
+=> END
+
 ~ diary 
 Annie: ... 
 Annie: They're furious with John. 

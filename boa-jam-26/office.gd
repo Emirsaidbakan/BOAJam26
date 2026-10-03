@@ -7,6 +7,7 @@ func _ready() -> void:
 	if not SceneManager.flags["deadmanFound"]:
 		SceneManager.flags["deadmanFound"] = true
 		DialogueManager.show_dialogue_balloon(deadmanDialogue, "bodyFound")
+		get_tree().get_first_node_in_group("player").freeze()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
