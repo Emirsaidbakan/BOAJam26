@@ -1,0 +1,33 @@
+~ start
+Annie: Annie: John?
+Annie: ...
+Annie: Oh my God...
+Annie: John!
+
+=> scream
+
+~ scream
+Annie: ...
+Annie: Someone killed him.
+Annie: But no one could have gotten into the house.
+Annie: The mansion is surrounded by cameras.
+Annie: No one entered.
+Annie: No one left.
+Annie: Whoever did this was already inside.
+Annie: Blunt force trauma...
+
+=> scene1
+
+~ scene1
+Annie: I need to figure out what happened.
+
+
+Nathan: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END

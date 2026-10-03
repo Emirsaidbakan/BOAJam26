@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bltmxo3ioekgc" path="res://art/Sideways desk and shelf.png" id="3_lcnwv"]
 [ext_resource type="Texture2D" uid="uid://d2n8j74rhagc2" path="res://art/Sideways desk and shelf (2).png" id="4_4i814"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_hsito"]
-[ext_resource type="FontFile" uid="uid://rbxtw8sn1r8e" path="res://fonts/ARCADECLASSIC.TTF" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="11_70x1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
@@ -4032,9 +4031,6 @@ physics_layer_0/collision_layer = 16
 sources/0 = SubResource("TileSetAtlasSource_43ocd")
 sources/1 = SubResource("TileSetAtlasSource_lcnwv")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5tygf"]
-radius = 25.019993
-
 [node name="Office" type="Node2D" unique_id=1444373539]
 
 [node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1089475384]
@@ -4082,19 +4078,12 @@ tile_set = SubResource("TileSet_5tygf")
 position = Vector2(1.9073486e-06, 9.536743e-07)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadMan" unique_id=962087153]
-position = Vector2(-16.000004, -1.0728836e-06)
-shape = SubResource("CircleShape2D_5tygf")
+[node name="Interactable" parent="DeadMan" unique_id=938960534 instance=ExtResource("11_70x1r")]
+position = Vector2(-16.000004, -3.8146973e-06)
+scale = Vector2(1.735, 1.735)
 
-[node name="Label" type="Label" parent="DeadMan" unique_id=1964665513]
-offset_left = -32.000008
-offset_top = -28.000002
-offset_right = 7.9999924
-offset_bottom = -7.000002
-scale = Vector2(0.8, 0.8)
-theme_override_fonts/font = ExtResource("10_3xqf3")
-theme_override_font_sizes/font_size = 7
-text = "[E] Interact
-"
+[node name="Sprite2D" parent="DeadMan/Interactable" index="1" unique_id=2085290654]
+position = Vector2(0, -13.195)
+scale = Vector2(0.6, 0.6)
 
-[node name="Interactable" parent="." unique_id=938960534 instance=ExtResource("11_70x1r")]
+[editable path="DeadMan/Interactable"]

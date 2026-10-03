@@ -1,10 +1,10 @@
 extends CharacterBody2D
-@export var speed = 350
+@export var speed = 200
 var screenSize
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	screenSize = get_viewport_rect()
+	screenSize = get_viewport_rect().size
 	add_to_group("player")
 	
 	# Check if SceneManager received a marker name from the door
