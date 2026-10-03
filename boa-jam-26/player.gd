@@ -5,6 +5,7 @@ var screenSize
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screenSize = get_viewport_rect()
+	add_to_group("player")
 	
 	# Check if SceneManager received a marker name from the door
 	if SceneManager.spawnDestination != "":

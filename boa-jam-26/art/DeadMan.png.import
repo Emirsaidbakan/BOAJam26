@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6shrukarwxcy"
-path="res://.godot/imported/2.png-0cca36a3f2bc4d3c673583397dbc3eb4.ctex"
+uid="uid://cs8htx0fx20l1"
+path="res://.godot/imported/DeadMan.png-9982fe9a4c22c5c3e56034d46010b99e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Soldier1/Walking/2.png"
-dest_files=["res://.godot/imported/2.png-0cca36a3f2bc4d3c673583397dbc3eb4.ctex"]
+source_file="res://art/DeadMan.png"
+dest_files=["res://.godot/imported/DeadMan.png-9982fe9a4c22c5c3e56034d46010b99e.ctex"]
 
 [params]
 

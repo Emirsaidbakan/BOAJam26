@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://55kx0rplfl3c" path="res://Dialogue/DialogueBalloon/NewRocker-Regular.ttf" id="1_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://bdahl15dgr4x0" path="res://art/BG.png" id="1_h7a2f"]
+[ext_resource type="Script" uid="uid://bywvt3x36dwjm" path="res://main_menu.gd" id="1_iwfq2"]
 [ext_resource type="FontFile" uid="uid://ciss82p802qsp" path="res://Dialogue/DialogueBalloon/Grenze-Medium.ttf" id="2_h7a2f"]
 [ext_resource type="Script" uid="uid://bxh56mi0lfuld" path="res://StartButton.gd" id="4_qoqlk"]
 [ext_resource type="AudioStream" uid="uid://cqcgt36aoqa4f" path="res://MainMenu.mp3" id="5_iwfq2"]
@@ -15,6 +16,7 @@ default_font = ExtResource("2_h7a2f")
 default_font_size = 42
 
 [node name="Node2D" type="Node2D" unique_id=1986880359]
+script = ExtResource("1_iwfq2")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=820760283]
 offset_right = 1079.0
