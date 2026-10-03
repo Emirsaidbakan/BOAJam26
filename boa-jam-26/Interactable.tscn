@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2o1h85svhm00"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ltcl"]
+radius = 13.0
+
+[node name="Interactable" type="Area2D" unique_id=938960534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=224680260]
+shape = SubResource("CircleShape2D_4ltcl")
+
+[node name="Label" type="Label" parent="." unique_id=402763923]
+texture_filter = 2
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 17.0
+offset_bottom = 3.0
+theme_override_font_sizes/font_size = 4
+text = "[E] Interact"
+clip_text = true

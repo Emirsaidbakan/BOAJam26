@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqkqxl5gfgtku" path="res://art/Doors/Door side version.png" id="2_sk5hu"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="3_jq3c7"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_jq3c7"]
+[ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="5_rq8ot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5hu"]
 texture = ExtResource("1_rq8ot")
@@ -6209,3 +6210,6 @@ position = Vector2(1, -114)
 position = Vector2(33, -126)
 target_scene = "uid://dre8ur7628852"
 spawnDestination = "FirstFloorToStairs"
+
+[node name="Interactable" parent="." unique_id=938960534 instance=ExtResource("5_rq8ot")]
+position = Vector2(-105, -94)
