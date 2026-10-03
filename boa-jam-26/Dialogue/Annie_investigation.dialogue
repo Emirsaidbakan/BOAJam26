@@ -39,8 +39,12 @@ Annie: What should I examine first?
 	=> papers
 - Examine the dirt
 	=> dirt
-- Leave the office
+- Leave the office 
+	Annie: I need to check the rest of the house.
+	Annie: There's someone in the hallway.
+	Annie: I think its the driver.
 	=> leave_office
+	
 
 ~ body
 Annie: There's some strange white powder on his jeans.
@@ -82,6 +86,98 @@ Annie: Someone could have used this to get in or out without using the office do
 => scene1
 
 ~ leave_office
-Annie: I need to check the rest of the house.
 
+- Talk to the driver
+	=> driver
+
+- Knock on Mom's door
+	=> mom_door
+
+- Knock on Crystal's door
+	=> crystal_door
+
+- Check Jeremy's room
+	=> jeremy_door
+
+- Go to the living room
+	=> living_room
+
+- Go back to the office
+	=> scene1
+
+~ driver
+
+Driver: What the hell are you doing here?
+
+Annie: What are YOU doing here?
+
+Driver: I went to the kitchen to get some water.
+Driver: Why? What's wrong?
+
+Annie: John is dead.
+
+Driver: ...
+
+Driver: What?
+
+Annie: You heard me.
+
+Driver: ...
+
+Driver: That's... unfortunate.
+
+Annie: Did you notice anything strange tonight?
+
+Driver: I wasn't exactly watching the house.
+
+Driver: But now that you mention it...
+
+Driver: I heard Jeremy talking on the phone earlier.
+
+Annie: What was he saying?
+
+Driver: Something like...
+Driver: "Yeah, I know him. I can handle him."
+
+Annie: Who was he talking about?
+
+Driver: I don't know.
+
+Driver: And there was something else.
+
+Annie: What?
+
+Driver: Fred.
+
+Annie: What did he say?
+
+Driver: "John won't be here for long anyway."
+
+Annie: ...
+
+Annie: That's an interesting thing to say.
+
+Driver: I'm only telling you what I heard.
+
+=> leave_office
+
+~ mom_door
+Annie: ...
+
+=> leave_office
+
+~ crystal_door
+Annie: ...
+
+=> leave_office
+
+~ jeremy_door
+Annie: ...
+
+=> leave_office
+
+~ living_room
+Annie: ...
+
+=> leave_office
 => END
