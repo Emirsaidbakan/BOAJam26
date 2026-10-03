@@ -1,38 +1,38 @@
 ~ start
-Annie: What the hell...?
+Annie: Ugh....What the hell...?
+Annie: I slept horribly...
 Annie: John?
 Annie: John, where are you?
 Annie: 
+Annie: Is he working in his office again?
+=> END
+
+~ office
 Annie: ...
 Annie: The office.
 Annie: Why is it locked?
 Annie: I have the keys.
+
+
+~ bodyFound
 Annie: John?
-Annie: ...
+Annie: JOHN! OH MY GOD...
 Annie: Oh my God...
-Annie: John!
-
-=> scream
-
-~ scream
 Annie: ...
-Annie: Someone killed him.
+Annie: Someone killed him....
 Annie: But no one could have gotten into the house.
 Annie: The mansion is surrounded by cameras.
 Annie: No one entered.
 Annie: No one left.
 Annie: Whoever did this was already inside.
 Annie: Blunt force trauma...
-
-=> scene1
-
-~ scene1
-Annie: I need to figure out what happened.
+Annie: I need to figure out what happened..
 Annie: The body is on the floor.
 Annie: There are papers spread across the desk.
 Annie: The baseball bat stand is empty.
 Annie: And there's dirt underneath that portrait.
 Annie: What should I examine first?
+=> END
 
 - Examine the body
 	=> body
@@ -53,8 +53,8 @@ Annie: ...
 Annie: Drugs.
 Annie: Jeremy...
 Annie: There's not much else here.
-do investigate_clue()
-=> scene1
+do SceneManager.incrementCluesFound()
+=> END
 
 ~ papers
 Annie: These papers...
@@ -63,8 +63,7 @@ Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
 do inspect_papers()
-do investigate_clue()
-=> scene1
+do SceneManager.incrementCluesFound()
 
 ~ dirt
 Annie: There's dirt underneath the portrait.
@@ -75,17 +74,15 @@ Annie: There's a button.
 	Annie: ...
 	Annie: The portrait moved.
 	Annie: There's a passage behind it.
-	do investigate_clue()
+	do SceneManager.incrementCluesFound()
 	=> passage
 
 - Leave it alone
 	Annie: I should investigate the rest of the room first.
-	=> scene1
 
 ~ passage
 Annie: A secret passage...
 Annie: Someone could have used this to get in or out without using the office door.
-=> scene1
 
 ~ leave_office
 
@@ -105,7 +102,6 @@ Annie: Someone could have used this to get in or out without using the office do
 	=> living_room
 
 - Go back to the office
-	=> scene1
 
 ~ driver
 Driver: What the hell are you doing here?
@@ -135,7 +131,7 @@ Driver: "John won't be here for long anyway."
 Annie: ...
 Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
-do investigate_clue()
+do SceneManager.incrementCluesFound()
 => leave_office
 
 ~ mom_door
@@ -169,7 +165,7 @@ Mother: ...
 Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
-do investigate_clue()
+do SceneManager.incrementCluesFound()
 => leave_office
 
 ~ crystal_door
@@ -198,7 +194,7 @@ Crystal: ...
 Crystal: Mother told me.
 Annie: ...
 Crystal: Is that all?
-do investigate_clue()
+do SceneManager.incrementCluesFound()
 => leave_office
 
 ~ jeremy_door
@@ -230,7 +226,7 @@ Butler: Mostly Fred.
 Annie: Why didn't anyone tell me about these?
 Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
-do investigate_clue()
+do SceneManager.incrementCluesFound()
 => leave_office
 
 ~ suspect_choice
