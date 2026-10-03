@@ -261,12 +261,11 @@ Annie: Who do I suspect?
 ~ wrong_suspect
 Annie: ...
 Annie: I need to sleep.
+do wrong_guess()
 => END
 
-
 ~ correct_suspect
-Annie: ...
 Annie: Crystal...
 Annie: I need to find out what happened.
-
+do correct_guess()
 => END
