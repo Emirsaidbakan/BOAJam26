@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dc7b5iy5w6lo7"
+path="res://.godot/imported/Annie_investigation.dialogue-6cbb133d0428261172cc26e930e1e1ce.tres"
+
+[deps]
+
+source_file="res://Dialogue/Annie_investigation.dialogue"
+dest_files=["res://.godot/imported/Annie_investigation.dialogue-6cbb133d0428261172cc26e930e1e1ce.tres"]
+
+[params]
+
+defaults=true
