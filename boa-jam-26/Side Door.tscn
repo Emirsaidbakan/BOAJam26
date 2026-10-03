@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://iw868dnubm5w"]
+
+[ext_resource type="Script" uid="uid://c8h4nhyb6bdab" path="res://side_door.gd" id="1_83l1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twsaa"]
+size = Vector2(3, 33)
+
+[node name="SideDoor" type="Area2D" unique_id=2125966249]
+script = ExtResource("1_83l1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242899425]
+position = Vector2(-7.5, 7)
+shape = SubResource("RectangleShape2D_twsaa")
