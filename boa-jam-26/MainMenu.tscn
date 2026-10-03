@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bmhtbn0lbucjn"]
+
+[ext_resource type="FontFile" uid="uid://55kx0rplfl3c" path="res://Dialogue/DialogueBalloon/NewRocker-Regular.ttf" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://bdahl15dgr4x0" path="res://BG.png" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://ciss82p802qsp" path="res://Dialogue/DialogueBalloon/Grenze-Medium.ttf" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://bxh56mi0lfuld" path="res://StartButton.gd" id="4_qoqlk"]
+
+[sub_resource type="Theme" id="Theme_htemk"]
+default_font = ExtResource("1_eiy7p")
+default_font_size = 96
+
+[sub_resource type="Theme" id="Theme_14cdr"]
+default_font = ExtResource("2_h7a2f")
+default_font_size = 42
+
+[node name="Node2D" type="Node2D" unique_id=1986880359]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=820760283]
+offset_right = 1079.0
+offset_bottom = 768.0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=1904518937]
+layout_mode = 2
+texture = ExtResource("1_h7a2f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=239500338]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=856137329]
+layout_mode = 2
+theme = SubResource("Theme_htemk")
+text = "Game Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=311941690]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_14cdr")
+text = "Start Game"
+script = ExtResource("4_qoqlk")
