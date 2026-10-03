@@ -4104,6 +4104,10 @@ scale = Vector2(0.9, 0.9)
 [node name="Sprite2D" parent="Papers" index="1" unique_id=2085290654]
 position = Vector2(27.665709, -12.680112)
 scale = Vector2(0.6, 0.6)
-
 [editable path="DeadMan/Interactable"]
+[node name="Interactable" parent="." unique_id=938960534 instance=ExtResource("11_70x1r")]
 [editable path="Papers"]
+
+[node name="SecretToOffice" type="Marker2D" parent="." unique_id=811533682]
+position = Vector2(31, 61)
+>>>>>>> Stashed changes
