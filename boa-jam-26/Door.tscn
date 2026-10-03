@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://cgp1nxfhxwi4p"]
 
 [ext_resource type="Script" uid="uid://ey0stbuk3yra" path="res://door.gd" id="1_1vvux"]
+[ext_resource type="Texture2D" uid="uid://cwyfywtamqcdq" path="res://art/Doors/Door.png" id="2_iu8q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tygf"]
 size = Vector2(18, 33)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1vvux"]
-load_path = "res://.godot/imported/Door.png-a4c724a89d4da074d1a0e7c40ead58f3.ctex"
 
 [node name="Door" type="Area2D" unique_id=2081190144]
 script = ExtResource("1_1vvux")
@@ -18,4 +16,4 @@ shape = SubResource("RectangleShape2D_5tygf")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=253014813]
 position = Vector2(7.1525574e-07, 3.000001)
 scale = Vector2(1.2499999, 1.2500001)
-texture = SubResource("CompressedTexture2D_1vvux")
+texture = ExtResource("2_iu8q0")
