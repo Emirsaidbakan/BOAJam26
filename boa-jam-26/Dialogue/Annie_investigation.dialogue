@@ -106,78 +106,125 @@ Annie: Someone could have used this to get in or out without using the office do
 	=> scene1
 
 ~ driver
-
 Driver: What the hell are you doing here?
-
 Annie: What are YOU doing here?
-
 Driver: I went to the kitchen to get some water.
 Driver: Why? What's wrong?
-
 Annie: John is dead.
-
 Driver: ...
-
 Driver: What?
-
 Annie: You heard me.
-
 Driver: ...
-
 Driver: That's... unfortunate.
-
 Annie: Did you notice anything strange tonight?
-
 Driver: I wasn't exactly watching the house.
-
 Driver: But now that you mention it...
-
 Driver: I heard Jeremy talking on the phone earlier.
-
 Annie: What was he saying?
-
 Driver: Something like...
 Driver: "Yeah, I know him. I can handle him."
-
 Annie: Who was he talking about?
-
 Driver: I don't know.
-
 Driver: And there was something else.
-
 Annie: What?
-
 Driver: Fred.
-
 Annie: What did he say?
-
 Driver: "John won't be here for long anyway."
-
 Annie: ...
-
 Annie: That's an interesting thing to say.
-
 Driver: I'm only telling you what I heard.
-
 => leave_office
 
 ~ mom_door
+Annie: ...
+Annie: I should talk to Mom.
+Annie: *Knock knock.*
+Mother: What is it?
+Annie: Mom, what did you do?
+Mother: ...
+Mother: What?
+Annie: John is dead.
+Mother: ...
+Mother: What are you talking about?
+Annie: You killed him, didn't you?
+if inspected_papers:
+	Annie: You found out he lost shares in BluMax.
+	Annie: You fought with him about it.
+	Annie: You got angry and killed him, DIDN'T YOU?
+	Mother: He lost BluMax too...?
+	Annie: ...
+	Mother: I didn't know that.
+else:
+	Annie: You fought with him about the shares.
+	Annie: You killed him, didn't you?
+	Mother: No!
+	Mother: I would never kill John.
+Mother: I was asleep all night.
+Mother: I don't know anything about what happened.
+Annie: ....You came to the door pretty quickly.
+Mother: ...
+Annie: Almost like you were already awake.
+Mother: I told you. I was asleep.
 Annie: ...
 
 => leave_office
 
 ~ crystal_door
+Annie: I should talk to Crystal.
+Annie: *Knock knock.*
+Crystal: What happened?
+Annie: John is dead.
+Crystal: What?
+Crystal: How is this possible?
+Crystal: Oh my God...
+Crystal: John...
+Annie: Don't pretend to be sad.
+Annie: I know you did it.
+Crystal: What?!
+Crystal: How could you even say that? Why would I kill my brother??
+Crystal: He was horrible with money!
+Crystal: He was in debt to so many people.
+Crystal: He's friends with drug addicts.
+Crystal: And he just lost BluMax!
+Crystal: One of those reasons is probably why he's dead.
+Crystal: I don't know anything.
+Crystal: I've been in my room the whole time.
 Annie: ...
-
+Annie: How do you know about BluMax?
+Crystal: ...
+Crystal: Mother told me.
+Annie: ...
+Crystal: Is that all?
 => leave_office
 
 ~ jeremy_door
+Annie: Jeremy?
+Annie: *Knock knock.*
+Annie: Jeremy?
 Annie: ...
-
+Annie: He's not answering.
+Annie: I should check somewhere else.
 => leave_office
 
 ~ living_room
+Annie: The living room.
+Butler: Mrs. Dedd?
+Annie: I need to ask you something.
+Butler: Of course.
+Annie: Did you see anything unusual tonight?
+Butler: I saw Jeremy leaving the house at around 3:30.
+Annie: Jeremy left?
+Butler: Yes.
 Annie: ...
-
+Butler: There is something else you should know.
+Butler: There are secret passages throughout the house.
+Annie: Secret passages?
+Butler: They were built when the children were younger.
+Butler: Fred, John, and Crystal made them together.
+Annie: Who uses them now?
+Butler: Mostly Fred.
+Annie: Why didn't anyone tell me about these?
+Butler: I suppose no one thought it was important.
+Annie: I'll keep that in mind.
 => leave_office
 => END
