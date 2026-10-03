@@ -409,3 +409,65 @@ Annie: ...
 Annie: This is the same diary I found before. 
 Annie: Crystal was hiding it. 
 Annie: Why?
+
+~ save_john
+Annie: 1:30 AM.
+Annie: John.
+Annie: I know what's going to happen.
+Annie: I need to get to his office.
+Annie: NOW.
+Annie: John!
+Annie: Open the door!
+John: Annie?
+Annie: Don't argue with me. Just open the door!
+John: What the hell is going on?
+Annie: Crystal is coming.
+John: Crystal?
+Annie: She's going to kill you.
+John: What?!
+Annie: Please, just trust me.
+John: ...
+John: Okay.
+Annie: We need to get out of here.
+Annie: Right now.
+
+=> save_ending
+
+~ death_john
+Annie: 1:30 AM.
+Annie: John...
+Annie: I know what's about to happen.
+Annie: I need to stop it.
+Annie: John!
+Annie: Why isn't he answering?
+Annie: The office...
+Annie: It's happening.
+Annie: I need to get there.
+Annie: NOW.
+Annie: John?!
+Annie: Oh my God.
+Annie: Crystal...
+Crystal: You shouldn't have come here.
+Annie: You killed him.
+Crystal: ...
+Annie: Crystal, what did you do?!
+Crystal: You weren't supposed to know.
+Annie: Stay away from me!
+Crystal: I'm sorry, Annie.
+Annie: CRYSTAL!
+=> death_ending
+
+~ save_ending
+Annie: ...
+Annie: We got out.
+Annie: John is alive.
+Annie: I actually stopped it.
+Annie: ...
+Annie: Now I just need to figure out what to do about Crystal.
+=> END
+
+~ death_ending
+Annie: ...
+Annie: I should have known.
+Annie: I was too late.
+=> END
