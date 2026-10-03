@@ -53,7 +53,7 @@ Annie: ...
 Annie: Drugs.
 Annie: Jeremy...
 Annie: There's not much else here.
-
+do investigate_clue()
 => scene1
 
 ~ papers
@@ -63,6 +63,7 @@ Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
 do inspect_papers()
+do investigate_clue()
 => scene1
 
 ~ dirt
@@ -74,6 +75,7 @@ Annie: There's a button.
 	Annie: ...
 	Annie: The portrait moved.
 	Annie: There's a passage behind it.
+	do investigate_clue()
 	=> passage
 
 - Leave it alone
@@ -83,7 +85,6 @@ Annie: There's a button.
 ~ passage
 Annie: A secret passage...
 Annie: Someone could have used this to get in or out without using the office door.
-
 => scene1
 
 ~ leave_office
@@ -134,6 +135,7 @@ Driver: "John won't be here for long anyway."
 Annie: ...
 Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
+do investigate_clue()
 => leave_office
 
 ~ mom_door
@@ -167,6 +169,7 @@ Mother: ...
 Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
+do investigate_clue()
 => leave_office
 
 ~ crystal_door
@@ -195,6 +198,7 @@ Crystal: ...
 Crystal: Mother told me.
 Annie: ...
 Crystal: Is that all?
+do investigate_clue()
 => leave_office
 
 ~ jeremy_door
@@ -226,5 +230,47 @@ Butler: Mostly Fred.
 Annie: Why didn't anyone tell me about these?
 Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
+do investigate_clue()
 => leave_office
+
+~ suspect_choice
+Annie: I need to think.
+Annie: Who do I suspect?
+
+- Mom
+	Annie: Mom...
+	=> wrong_suspect
+
+- Crystal
+	Annie: Crystal...
+	=> correct_suspect
+
+- Jeremy
+	Annie: Jeremy...
+	=> wrong_suspect
+
+- Driver
+	Annie: The driver...
+	=> wrong_suspect
+
+- Fred
+	Annie: Fred...
+	=> wrong_suspect
+
+- I'm not sure
+	Annie: I don't know yet.
+	=> wrong_suspect
+
+
+~ wrong_suspect
+Annie: ...
+Annie: I need to sleep.
+=> END
+
+
+~ correct_suspect
+Annie: ...
+Annie: Crystal...
+Annie: I need to find out what happened.
+
 => END
