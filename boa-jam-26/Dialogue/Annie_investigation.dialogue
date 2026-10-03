@@ -320,3 +320,18 @@ Jeremy: I can't deal with this right now.
 do SceneManager.incrementCluesFound()
 => END
 
+~ mom_fred_overheard
+Annie: Wait. Is that mother in Fred's room I hear?
+Mother: Crystal has been acting strange lately.
+Fred: What do you mean?
+Mother: She seems very angry at John.
+Mother: She was acting suspicious tonight.
+Annie: Crystal?
+Mother: I don't know what she's thinking.
+Mother: Just keep an eye on her.
+Fred: I will.
+Annie: Mom said she was asleep.
+Annie: She lied to me.
+do SceneManager.incrementCluesFound()
+=> END
+
