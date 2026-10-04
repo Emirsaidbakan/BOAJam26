@@ -9,7 +9,7 @@
 
 [sub_resource type="Theme" id="Theme_htemk"]
 default_font = ExtResource("1_eiy7p")
-default_font_size = 96
+default_font_size = 72
 
 [sub_resource type="Theme" id="Theme_14cdr"]
 default_font = ExtResource("2_h7a2f")
@@ -28,11 +28,13 @@ texture = ExtResource("1_h7a2f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=239500338]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=856137329]
 layout_mode = 2
 theme = SubResource("Theme_htemk")
-text = "Game Name"
+text = "Chronicle of a Murder Foretold"
 horizontal_alignment = 1
 vertical_alignment = 1
 

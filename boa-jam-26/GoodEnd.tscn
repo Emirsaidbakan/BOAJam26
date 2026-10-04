@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dleiqswtqsedg"]
+
+[ext_resource type="FontFile" uid="uid://55kx0rplfl3c" path="res://Dialogue/DialogueBalloon/NewRocker-Regular.ttf" id="1_afnp2"]
+[ext_resource type="Script" uid="uid://b6aknjfgmlma6" path="res://MainMenuButtonInGameOver.gd" id="2_l7c77"]
+
+[sub_resource type="Theme" id="Theme_htemk"]
+default_font = ExtResource("1_afnp2")
+default_font_size = 76
+
+[sub_resource type="Theme" id="Theme_14cdr"]
+default_font = ExtResource("1_afnp2")
+default_font_size = 42
+
+[node name="BadEnd" type="Node2D" unique_id=515282589]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=239499623]
+offset_top = 276.0
+offset_right = 1080.0
+offset_bottom = 470.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1591791904]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_htemk")
+text = "Good Ending"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=506169899]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_14cdr")
+text = "Main Menu"
+script = ExtResource("2_l7c77")
