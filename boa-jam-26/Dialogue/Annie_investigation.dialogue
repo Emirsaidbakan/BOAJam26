@@ -377,7 +377,9 @@ Mother: Just keep an eye on her.
 Fred: I will.
 Annie: Mom said she was asleep.
 Annie: She lied to me.
+do SceneManager.markDone("momFredOverheard")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ mom_fred_choice
