@@ -64,11 +64,11 @@ func _on_interacted(id: String) -> void:
 		"secretDoorFirstTime":
 			flags["inspectedSecretDoor"] = true
 		"talkedWithButler": 
-			flags["talkedWithButler"] = false
+			flags["talkedWithButler"] = true
 		"talkedWithDriver": 
-			flags["talkedWithDriver"] = false
+			flags["talkedWithDriver"] = true
 		"talkedWithMother": 
-			flags["talkedWithMother"] = false
+			flags["talkedWithMother"] = true
 		_:
 			print("Unknown interactable: ", id)
 			
@@ -95,7 +95,9 @@ func openSecretPassage() -> void:
 	
 func incrementCluesFound():
 	flags["cluesFound"] += 1
-	if flags["cluesFound"] == 3:
+	print("Clues found: ", flags["cluesFound"])
+
+	if flags["cluesFound"] >= 3:
 		flags["cluesFound"] = 0
 		endDay()
 			
