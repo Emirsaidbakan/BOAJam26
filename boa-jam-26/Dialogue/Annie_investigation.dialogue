@@ -395,7 +395,7 @@ Annie: I heard you talking to Mom.
 Fred: ...
 Annie: I need to ask you something.
 
-if time >= 3.5:
+if SceneManager.flags["day"] >= 2:
     Annie: Where were you around 2:00 AM?
     Fred: I went to Crystal's room.
     Annie: Why?
@@ -409,8 +409,18 @@ if time >= 3.5:
     Annie: Did she say anything?
     Fred: No.
     Fred: I didn't think much of it at the time.
+else:
+	Annie: Where were you around 2:00 AM?
+    Fred: I went to Crystal's room.
+    Annie: Why?
+    Fred: I needed to speak with her.
+    Annie: And?
+    Fred: thats all.
+    Annie: Did she say anything?
+    Fred: No.
+    Fred: Nothing happened.
 
-if met_butler:
+if SceneManager.flags["talkedWithButler"]:
     Annie: You know about the secret passages. I know you use them.
     Annie: John's office was locked.
     Annie: Did you use one of the passages to get to him?
