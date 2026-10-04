@@ -106,6 +106,7 @@ Annie: Someone could have used this to get in or out without using the office do
 ~ passage
 Annie: It's completely dark... 
 Annie: I can barely see where I'm going. 
+do SceneManager.markDone("enteredPassage")
 => END
 
 => diary 
@@ -367,20 +368,24 @@ do SceneManager.incrementCluesFound()
 
 ~ mom_fred_overheard
 Annie: Wait. Is that mother in Fred's room I hear?
-Mother: Crystal has been acting strange lately.
-Fred: What do you mean?
-Mother: She seems very angry at John.
-Mother: She was acting suspicious tonight.
-Annie: Crystal?
-Mother: I don't know what she's thinking.
-Mother: Just keep an eye on her.
-Fred: I will.
-Annie: Mom said she was asleep.
-Annie: She lied to me.
-do SceneManager.markDone("momFredOverheard")
-do SceneManager.incrementCluesFound()
-do removeInteractable()
-=> END
+- Hear the convo
+    Mother: Crystal has been acting strange lately.
+	Fred: What do you mean?
+	Mother: She seems very angry at John.
+	Mother: She was acting suspicious tonight.
+	Annie: Crystal?
+	Mother: I don't know what she's thinking.
+	Mother: Just keep an eye on her.
+	Fred: I will.
+	if SceneManager.flags["talkedWithMother"]:
+		Annie: Mom said she was asleep.
+		Annie: She lied to me.
+	do SceneManager.markDone("momFredOverheard")
+	do SceneManager.incrementCluesFound()
+	do removeInteractable()
+	=> END
+- Go downstairs
+    => leave_office
 
 ~ mom_fred_choice
 Annie: Mom just left.
@@ -393,8 +398,9 @@ Annie: Mom just left.
 Annie: Fred.
 Fred: Annie?
 Fred: What are you doing up here?
-Annie: I heard you talking to Mom.
-Fred: ...
+if SceneManager.flags["momFredOverheard"]:
+    Annie: I heard you talking to Mom.
+    Fred: ...
 Annie: I need to ask you something.
 
 if SceneManager.flags["day"] >= 2:
