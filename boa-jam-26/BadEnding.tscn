@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://qoq0tsrjgxru" path="res://bad_ending.gd" id="1_cdjdg"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="1_qqn8h"]
 [ext_resource type="Texture2D" uid="uid://cs8htx0fx20l1" path="res://art/DeadMan.png" id="2_4abk8"]
-[ext_resource type="Resource" uid="uid://c8b7d8aob5cj2" path="res://Dialogue/Annie_investigation.dialogue" id="2_5rans"]
+[ext_resource type="Resource" uid="uid://csmk8o0jc2lov" path="res://Dialogue/Annie_Investigation.dialogue" id="2_5rans"]
 [ext_resource type="Texture2D" uid="uid://ide2a26wv0i6" path="res://art/ScatteredPapers.png" id="3_cdjdg"]
 [ext_resource type="Texture2D" uid="uid://0vhmrd6xrhh7" path="res://art/tiles and items.png" id="4_5rans"]
 [ext_resource type="Texture2D" uid="uid://bltmxo3ioekgc" path="res://art/Sideways desk and shelf.png" id="5_5hw8u"]
@@ -4866,3 +4866,6 @@ tile_set = SubResource("TileSet_cdjdg")
 position = Vector2(-7.6293945e-06, -15.999999)
 scale = Vector2(1.375, 1.375)
 texture = ExtResource("9_4abk8")
+
+[node name="WrongChoiceMarker" type="Marker2D" parent="." unique_id=2085691807]
+position = Vector2(-56, 5)

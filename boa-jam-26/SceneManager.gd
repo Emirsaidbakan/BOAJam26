@@ -68,7 +68,7 @@ func _on_interacted(id: String) -> void:
 		"dirtFound":
 			flags["dirtFound"] = true
 		"secretDoorFirstTime":
-			flags["inspectedSecretDoor"] = false
+			flags["secretDoorFirstTime"] = false
 		"talkedWithButler": 
 			flags["talkedWithButler"] = true
 		"talkedWithDriver": 
@@ -83,8 +83,9 @@ func markDone(id: String) -> void:
 	flags[id] = true
 	
 func setDirtFound() -> void:
-	SceneManager.interacted.emit("dirtFound")
-	openSecretPassage()
+	if not flags["dirtFound"]:
+		flags["dirtFound"] = true
+		openSecretPassage()
 
 func showSuspects() -> void:
 	var suspects: Node2D = get_tree().current_scene.find_child("Suspects")
@@ -95,9 +96,17 @@ func openSecretPassage() -> void:
 	var secretDoorLayer: TileMapLayer = get_tree().current_scene.find_child("SecretDoorLayer")
 	var secretDoor: Area2D = get_tree().current_scene.find_child("SecretDoor")
 	
-	DeskLayer.global_position.x -= 20
-	secretDoorLayer.show()
-	secretDoor.enable()
+	if DeskLayer:
+		DeskLayer.global_position.x -= 20
+
+	if secretDoorLayer:
+		secretDoorLayer.show()
+
+	if secretDoor:
+		secretDoor.enable()
+		
+	else:
+		print("WARNING: SecretDoor not found in current scene.")
 	
 func incrementCluesFound():
 	flags["cluesFound"] += 1
@@ -132,7 +141,7 @@ func goodEnding() -> void:
 func badEnding() -> void:
 	change_room("res://BadEnd.tscn","BadEndingSpawn")
 
-func correct_guess() -> void:
+func correctGuess() -> void:
 	SceneManager.flags["goodEnding"] = true
 	change_room("res://cutscene.tscn", "CutsceneMarker")
 

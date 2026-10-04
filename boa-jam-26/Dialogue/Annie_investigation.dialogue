@@ -334,7 +334,6 @@ Who does Annie suspect?
 	=> wrong_suspect
 
 - Crystal
-	Annie: Crystal...
 	=> correct_suspect
 
 - Jeremy
@@ -362,7 +361,7 @@ do SceneManager.wrongGuess()
 
 ~ correct_suspect
 Annie: Crystal...
-Annie: I need to find out what happened.
+Annie: She did it didn't she....I need to find out what happened.
 do SceneManager.correctGuess()
 => END
 
@@ -404,15 +403,11 @@ Annie: Wait. Is that mother in Fred's room I hear?
 		Annie: She lied to me.
 	do SceneManager.markDone("momFredOverheard")
 	do SceneManager.incrementCluesFound()
-	do removeInteractable()
-	=> END
-- Go downstairs
-    => leave_office
-
-~ mom_fred_choice
-Annie: Mom just left.
-- Talk to Fred
-    => fred
+	Annie: Mom just left.
+	- Talk to Fred
+	  => fred
+	- Go downstairs
+      => leave_office
 - Go downstairs
     => leave_office
 
@@ -468,6 +463,7 @@ Annie: Do you know anything else?
 Fred: No.
 Fred: I'm telling you everything I know.
 Annie: ...
+do removeInteractable()
 => END
 
 ~ crystal_passage 
@@ -499,12 +495,14 @@ Annie: Crystal was hiding it.
 Annie: Why?
 => END
 
-~ good_ending
+~ good_cutscene
 Annie: 1:30 AM.
 Annie: John.
 Annie: I know what's going to happen.
 Annie: I need to get to his office.
 Annie: NOW.
+do SceneManager.change_room("res://GoodEnding", "CorrectChoiceMarker")
+
 => END
 
 ~ save_john
@@ -535,6 +533,7 @@ Annie: The office...
 Annie: It's happening.
 Annie: I need to get there.
 Annie: NOW.
+do SceneManager.change_room("res://BadEnding.tscn", "CorrectChoiceMarker")
 
 ~ death_john
 Annie: John?!
