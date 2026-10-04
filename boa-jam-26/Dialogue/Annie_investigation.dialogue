@@ -267,17 +267,37 @@ Annie: Did you see anything unusual tonight?
 Butler: I saw Jeremy leaving the house at around 3:30.
 Annie: Jeremy left?
 Butler: Yes.
-Annie: ...
-Butler: There is something else you should know.
-Butler: There are secret passages throughout the house.
-Annie: Secret passages?
-Butler: They were built when the children were younger.
-Butler: Fred, John, and Crystal made them together.
-Annie: Who uses them now?
-Butler: Mostly Fred.
-Annie: Why didn't anyone tell me about these?
-Butler: I suppose no one thought it was important.
-Annie: I'll keep that in mind.
+if SceneManager.flags["enteredPassage"]:
+    Annie: You know about the secret passages, don't you?
+    Butler: ...
+    Annie: I found one behind the bookshelf in the office.
+    Butler: I see.
+    Annie: Fred, John, and Crystal built them?
+    Butler: Yes.
+	Annie: Who uses them now?
+    Butler: Mostly Fred.
+elif SceneManager.flags["dirtFound"]:
+    Butler: There is something else you should know.
+    Butler: There are secret passages throughout the house.
+    Annie: Secret passages?
+    Butler: They were built when the children were younger.
+    Butler: Fred, John, and Crystal made them together.
+    Annie: ...
+    Annie: I found a button underneath the portrait.
+    Annie: That must be the entrance to one of them.
+    Butler: It would seem so.
+    Annie: Who uses them now?
+    Butler: Mostly Fred.
+else:
+    Butler: There is something else you should know.
+    Butler: There are secret passages throughout the house.
+    Annie: Secret passages?
+    Butler: They were built when the children were younger.
+    Butler: Fred, John, and Crystal made them together.
+    Annie: Who uses them now?
+    Butler: Mostly Fred.
+    Annie: Why didn't anyone tell me about these?
+    Butler: I suppose no one thought it was important.
 do SceneManager.markDone("talkedWithButler")
 do SceneManager.incrementCluesFound()
 do makeUninteractable()
