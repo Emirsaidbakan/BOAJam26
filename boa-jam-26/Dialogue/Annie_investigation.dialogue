@@ -363,7 +363,9 @@ Jeremy: I couldn't face him.
 Annie: So you were just going to leave?
 Jeremy: I didn't know what else to do.
 Jeremy: I can't deal with this right now.
+do SceneManager.markDone("jeremyLeaving")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ mom_fred_overheard

@@ -14,7 +14,7 @@ func _ready() -> void:
 	elif SceneManager.flags["day"] == 2:
 		DialogueManager.show_dialogue_balloon(dialogueFile, "dayTwo")
 	elif SceneManager.flags["day"] == 3: 
-		DialogueManager.show_dialogue_balloon(dialogueFile, "dayTwo")
+		DialogueManager.show_dialogue_balloon(dialogueFile, "dayThree")
 
 func get_time_text() -> String:
 	var hour = int(time)

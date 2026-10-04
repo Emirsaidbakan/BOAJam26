@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="8_h8ag2"]
 [ext_resource type="Texture2D" uid="uid://btd6vmf1n07ie" path="res://art/Characters/Driver.png" id="10_k8clq"]
 [ext_resource type="Script" uid="uid://7agm1y5lkbtf" path="res://jeremyDoor.gd" id="10_tqvt1"]
+[ext_resource type="Texture2D" uid="uid://21biguech6e7" path="res://art/Characters/BestFriend.png" id="13_4r2qe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yok4s"]
 texture = ExtResource("2_o8ec2")
@@ -3999,7 +4000,7 @@ tile_map_data = PackedByteArray("AAAAAPz/AAAVAAIAAGAAAPv/AAAWAAIAAGABAPz/AAAPAAg
 tile_set = SubResource("TileSet_7w07i")
 
 [node name="Player" parent="." unique_id=383054240 instance=ExtResource("1_c5cu3")]
-z_index = 1
+z_index = 2
 position = Vector2(-38, -45)
 
 [node name="Door" parent="." unique_id=2081190144 instance=ExtResource("3_jq0fr")]
@@ -4073,7 +4074,29 @@ position = Vector2(90, 35.75)
 scale = Vector2(1.625, 1.625)
 texture = ExtResource("10_k8clq")
 
+[node name="Jeremy" parent="." unique_id=90842915 instance=ExtResource("8_8vqf6")]
+z_index = -1
+dialogue_title = "jeremy_leaving"
+one_time_only = true
+
+[node name="CollisionShape2D" parent="Jeremy" index="0" unique_id=1056620778]
+z_index = 5
+position = Vector2(-38.5, -45.5)
+scale = Vector2(1.575, 1.575)
+
+[node name="E" parent="Jeremy" index="1" unique_id=894843785]
+z_index = 5
+position = Vector2(-38.000004, -65)
+scale = Vector2(1.1111112, 1.1111112)
+
+[node name="Character" parent="Jeremy" index="2" unique_id=197033535]
+z_index = 2
+position = Vector2(-38.000004, -46.000004)
+scale = Vector2(1.5859376, 1.5859376)
+texture = ExtResource("13_4r2qe")
+
 [editable path="MotherRoom"]
 [editable path="SisterRoom"]
 [editable path="JeremyRoom"]
 [editable path="Driver"]
+[editable path="Jeremy"]
