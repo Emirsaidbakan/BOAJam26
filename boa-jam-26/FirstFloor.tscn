@@ -6217,6 +6217,7 @@ position = Vector2(-105, -97)
 [node name="SideDoor" parent="." unique_id=1454844827 instance=ExtResource("4_jq3c7")]
 position = Vector2(38, -22)
 target_scene = "uid://dj3leq33x7qrs"
+spawnDestination = "FirstFloorToBedroom"
 
 [node name="BedroomToFirstFloor" type="Marker2D" parent="." unique_id=925653147]
 position = Vector2(22, -8)

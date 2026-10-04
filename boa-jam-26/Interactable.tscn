@@ -2,12 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bdry4ov1lwtbe" path="res://interactable.gd" id="1_msfch"]
 [ext_resource type="Texture2D" uid="uid://c5ttl6o1j4p3u" path="res://art/E.png" id="2_ojdgt"]
+[ext_resource type="Resource" uid="uid://dc7b5iy5w6lo7" path="res://Dialogue/Annie_investigation.dialogue" id="2_v7umd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ltcl"]
 radius = 13.0
 
 [node name="Interactable" type="Area2D" unique_id=938960534]
 script = ExtResource("1_msfch")
+dialogue_resource = ExtResource("2_v7umd")
+interactionId = "sleep"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=224680260]
 shape = SubResource("CircleShape2D_4ltcl")

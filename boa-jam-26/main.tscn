@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://7r261jc2mwh2" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://b8dvxctav04lm" path="res://Dialogue/DialogueBalloon/balloon.tscn" id="4_lquwl"]
 [ext_resource type="Resource" uid="uid://dc7b5iy5w6lo7" path="res://Dialogue/Annie_investigation.dialogue" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dto372ki6d1ct" path="res://art/Beds.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://brjgsk0lud286" path="res://art/Doors/All door sides.png" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://d2n8j74rhagc2" path="res://art/Sideways desk and shelf (2).png" id="7_kek77"]
-[ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="8_kek77"]
+[ext_resource type="Script" uid="uid://blau5jtxhukwp" path="res://bed.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://b7nxs3vjqfc44" path="res://bedroom_door.gd" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://c5ttl6o1j4p3u" path="res://art/E.png" id="10_efxa6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("5_lquwl")
@@ -3922,12 +3923,14 @@ texture = ExtResource("7_5vw27")
 sources/0 = SubResource("TileSetAtlasSource_4c57u")
 sources/1 = SubResource("TileSetAtlasSource_efxa6")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tygf"]
+size = Vector2(4, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vw27"]
+radius = 34.0
+
 [node name="Main" type="Node2D" unique_id=714652029]
 script = ExtResource("1_h2yge")
-
-[node name="DialogueBalloon" parent="." unique_id=38036521 instance=ExtResource("4_lquwl")]
-dialogue_resource = ExtResource("5_7mycd")
-auto_start = true
 
 [node name="Player" parent="." unique_id=383054240 instance=ExtResource("3_h2yge")]
 z_index = 50
@@ -3959,10 +3962,31 @@ tile_set = SubResource("TileSet_kek77")
 tile_map_data = PackedByteArray("AAADAP3/AAARAAcAAAACAP3/AAARAAcAAAACAP7/AAARAAcAAAADAP7/AAARAAcAAAABAPz/AAAQAAYAAAACAPz/AAARAAYAAAADAPz/AAARAAYAAAAEAPz/AAASAAYAAAABAP7/AAAQAAcAAAABAP//AAAQAAgAAAABAP3/AAAQAAcAAAACAP//AAARAAgAAAADAP//AAARAAgAAAAEAP//AAASAAgAAAAEAP7/AAASAAcAAAAEAP3/AAASAAcAAAAIAPf/AAAdAA0AAAAIAPj/AAAdAA4AAAACAPf/AAAKAAwAAAACAPj/AAAKAA0AAAADAPf/AAALAAwAAAADAPj/AAALAA0AAAD8//z/AQACAAAAAAD8//3/AQACAAEAAAD8//r/AAAGAAMAAAD9//r/AAAHAAMAAAA=")
 tile_set = SubResource("TileSet_4c57u")
 
-[node name="SideDoor" parent="." unique_id=2125966249 instance=ExtResource("8_kek77")]
-position = Vector2(-55, -56)
+[node name="DayEnd" type="Marker2D" parent="." unique_id=46316398]
+position = Vector2(48, -47)
+
+[node name="FirstFloorToBedroom" type="Marker2D" parent="." unique_id=1187932355]
+position = Vector2(-44, -44)
+
+[node name="BedroomDoor" type="Area2D" parent="." unique_id=1169664435]
+script = ExtResource("9_4c57u")
 target_scene = "uid://d1ppn8xr8sx2q"
 spawnDestination = "BedroomToFirstFloor"
 
-[node name="DayEnd" type="Marker2D" parent="." unique_id=46316398]
-position = Vector2(48, -47)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomDoor" unique_id=1136647105]
+position = Vector2(-63, -48)
+shape = SubResource("RectangleShape2D_5tygf")
+
+[node name="Bed" type="Area2D" parent="." unique_id=1148012920]
+script = ExtResource("8_kek77")
+dialogue_resource = ExtResource("5_7mycd")
+dialogue_title = "bed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed" unique_id=1745639656]
+position = Vector2(48, -94)
+shape = SubResource("CircleShape2D_5vw27")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=307194885]
+position = Vector2(48, -119.99999)
+scale = Vector2(1.1666666, 1.1666666)
+texture = ExtResource("10_efxa6")

@@ -4867,6 +4867,7 @@ position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
 dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "body"
+one_time_only = true
 
 [node name="Sprite2D" parent="DeadMan/Interactable" index="1" unique_id=2085290654]
 position = Vector2(0, -13.195)

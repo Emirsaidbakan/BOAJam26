@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bofp454i8n3yu"]
+
+[ext_resource type="Texture2D" uid="uid://ttdl3yoddx5v" path="res://art/blackscreen.png" id="1_1tesx"]
+[ext_resource type="Script" uid="uid://cilps7dpsjd4f" path="res://choice.gd" id="1_hfw3x"]
+
+[node name="Choice" type="Node2D" unique_id=814760524]
+script = ExtResource("1_hfw3x")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=986287718]
+offset_left = -2686.0
+offset_top = -2222.0
+offset_right = 2699.0
+offset_bottom = 1763.0
+texture = ExtResource("1_1tesx")

@@ -1,4 +1,4 @@
-~ start
+~ begin
 Annie: Ugh....What the hell...?
 Annie: I slept horribly...
 Annie: John?
@@ -23,8 +23,7 @@ Annie: But no one could have gotten into the house.
 Annie: The mansion is surrounded by cameras.
 Annie: No one entered.
 Annie: No one left.
-Annie: Whoever did this was already inside.
-Annie: Blunt force trauma...
+Annie: Whoever did this was already inside..
 Annie: I need to figure out what happened..
 Annie: The body is on the floor.
 Annie: There are papers spread across the desk.
@@ -47,12 +46,14 @@ Annie: What should I examine first?
 	
 
 ~ body
+Annie: Blunt force trauma..
 Annie: There's some strange white powder on his jeans.
 Annie: ...
 Annie: Drugs.
 Annie: Jeremy...
 Annie: There's not much else here.
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ papers
@@ -62,6 +63,7 @@ Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ dirt
@@ -80,6 +82,14 @@ Annie: There's a button.
 - Leave it alone
 	Annie: I should investigate the rest of the room first.
 	=> END
+
+~ sleep
+Annie: I feel sleepy...
+=> END
+
+~ bed
+Annie: I should sleep for now..
+=> END
 
 ~ portrait_choice 
 Annie: Someone could have used this to get in or out without using the office door. 

@@ -5,10 +5,13 @@ var inspected_papers = false
 
 var clue_count = 0
 var loop_number = 1
+var dialogueFile = preload("res://Dialogue/Annie_investigation.dialogue")
 
 
 func _ready() -> void:
-	print("ANNIE WAKES UP AT ", get_time_text())
+	if SceneManager.flags["gameStart"] == true:
+		SceneManager.flags["gameStart"] = false
+		DialogueManager.show_dialogue_balloon(dialogueFile, "begin")
 
 
 func get_time_text() -> String:

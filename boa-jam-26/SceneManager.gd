@@ -4,6 +4,7 @@ signal interacted(id: String)
 var mainDialogue = preload("res://Dialogue/Annie_investigation.dialogue")
 
 var flags: Dictionary = {
+	"gameStart": true,
 	"cluesFound": 0,
 	"sleep": false,
 	"deadmanFound": false,
@@ -67,10 +68,9 @@ func _on_interacted(id: String) -> void:
 func setDirtFound() -> void:
 	SceneManager.interacted.emit("dirtFound")
 	#openSecretPassage()
-	
+	#
 #func openSecretPassage() -> void:
-	#$office/DeskLayer.global_position.x -= 10
-	#print("Done")
+	#"res://office.tscn"
 	
 	
 func incrementCluesFound():
@@ -81,11 +81,14 @@ func incrementCluesFound():
 			
 func endDay() -> void:
 	flags["day"] += 1
+	await DialogueManager.dialogue_ended
 	sleep()
 	
 func sleep() -> void:
+	flags["sleep"] = true
 	DialogueManager.show_dialogue_balloon(mainDialogue, "sleep")
-	await change_room("res://main.tscn", "DayEnd")
+	await DialogueManager.dialogue_ended
+	change_room("res://main.tscn", "DayEnd")
 	var door = get_tree().current_scene.get_node_or_null("SideDoor")
 	if door:
 		door.queue_free()
