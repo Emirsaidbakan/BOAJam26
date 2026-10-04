@@ -12,7 +12,7 @@ func _ready() -> void:
 	if SceneManager.flags["day"] == 3:
 		$Sister.enable();
 		$Diary.disable();
-		$DiaryDayThree.enable()
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

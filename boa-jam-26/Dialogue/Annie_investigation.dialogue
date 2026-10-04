@@ -489,13 +489,30 @@ do removeInteractable()
 => END
 
 ~ hidden_diary 
-Annie: A diary. 
-Annie: The cover says... 
-Annie: "Dedd." 
-Annie: ... 
-Annie: This is the same diary I found before. 
-Annie: Crystal was hiding it. 
-Annie: Why?
+if SceneManager.flags["diaryFound"]:
+	Annie: A diary.
+	Annie: The cover says...
+	Annie: "Dedd."
+	Annie: ...
+	Annie: This is the same diary I found before.
+	Annie: Crystal was hiding it.
+	Annie: Why?
+else:
+	Annie: A diary?
+	Annie: The cover says...
+	Annie: "Dedd."
+	Annie: Someone in the family wrote this.
+	Annie: I should read it.
+	Annie: ...
+	Annie: They're furious with John.
+	Annie: They blame him for what happened to them.
+	Annie: ...
+	Annie: They lost their job.
+	Annie: Whoever wrote this had a serious reason to hate him.
+	do SceneManager.markDone("diaryFound")
+	do SceneManager.incrementCluesFound()
+
+do removeInteractable()
 => END
 
 ~ good_ending
