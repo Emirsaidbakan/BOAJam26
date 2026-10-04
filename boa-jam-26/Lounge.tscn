@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bltmxo3ioekgc" path="res://art/Sideways desk and shelf.png" id="4_x1y53"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_yynrf"]
 [ext_resource type="PackedScene" uid="uid://dc1nmibyihs6s" path="res://BackDoor.tscn" id="6_7c6af"]
+[ext_resource type="PackedScene" uid="uid://dsq2rpbjj2sr5" path="res://NPC.tscn" id="6_yq10c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7c6af"]
 texture = ExtResource("1_rbvun")
@@ -4763,6 +4764,13 @@ z_index = 5
 tile_map_data = PackedByteArray("AAD3//b/AwAAAA0AAAD3//f/AwAAAA0AAAD3//j/AwAAAA0AAAD3//n/AwAAAA0AAAD3//r/AwAAAA0AAAD3//v/AwAAAA0AAAD3//z/AwAAAA0AAAD3//3/AwAAAA0AAAD3//7/AwAAAA0AAAD3////AwAAAA0AAAD3/wAAAwAAAA0AAAACAPb/AwAEAA0AAAACAPf/AwAEAA0AAAACAPj/AwAEAA0AAAACAPn/AwAEAA0AAAACAPr/AwAEAA0AAAACAPv/AwAEAA0AAAACAPz/AwAEAA0AAAACAP3/AwAEAA0AAAACAP7/AwAEAA0AAAACAP//AwAEAA0AAAACAAAAAwAEAA0AAAD4//X/AwACAAsAAAD5//X/AwACAAsAAAD6//X/AwACAAsAAAD7//X/AwACAAsAAAD8//X/AwACAAsAAAD9//X/AwACAAsAAAD+//X/AwACAAsAAAD///X/AwACAAsAAAAAAPX/AwACAAsAAAABAPX/AwACAAsAAAD4/wEAAwACAA8AAAD5/wEAAwACAA8AAAD6/wEAAwACAA8AAAD7/wEAAwACAA8AAAD8/wEAAwACAA8AAAD9/wEAAwACAA8AAAD+/wEAAwACAA8AAAD//wEAAwACAA8AAAAAAAEAAwACAA8AAAABAAEAAwACAA8AAAD7//z/AwARAAQAAAD///z/AwASAAQAAAD///3/AwASAAQAAAD7//7/AwARAAUAAAD+//7/AwARAAUAAAD///7/AwASAAUAAAD///b/AAASAAsAAAABAPb/AAAfAA0AAAABAPf/AAAfAA4AAAD4//b/AAAKAAoAAAD4//f/AAAKAAsAAAABAPn/AgABAAAAAAABAPr/AgABAAEAAAD4//n/AgACAAAAAAD4//r/AgACAAEAAAD9//z/AwARAAQAAAD9//3/AwARAAQAAAD9//7/AwARAAUAAAD8//7/AwARAAUAAAD8//3/AwARAAQAAAD7//3/AwARAAQAAAD8//z/AwARAAQAAAD+//3/AwARAAQAAAD+//z/AwARAAQAAAD9/wAAAgADAAEAAAD8/wAAAgADAAEAAAD7//v/AwARAAQAAAD8//v/AwARAAQAAAD9//v/AwARAAQAAAD+//v/AwARAAQAAAD///v/AwASAAQAAAD6//3/AwAQAAQAAAD6//z/AwAQAAQAAAD6//v/AwAQAAQAAAD8//r/AwARAAMAAAD9//r/AwARAAMAAAD+//r/AwARAAMAAAD///r/AwASAAMAAAD6//7/AwAQAAUAAAD6//r/AwAQAAMAAAD7//r/AwARAAMAAAA=")
 tile_set = SubResource("TileSet_kaihy")
 
+[node name="Chef" parent="." unique_id=1039506296 instance=ExtResource("6_yq10c")]
+z_index = 3
+position = Vector2(-48, -114)
+
+[node name="CollisionShape2D" parent="Chef" index="0" unique_id=1056620778]
+scale = Vector2(1.715, 1.715)
+
 [node name="Player" parent="." unique_id=383054240 instance=ExtResource("2_t87ws")]
 position = Vector2(-48, -7)
 
@@ -4781,3 +4789,5 @@ spawnDestination = "LoungeToStairs"
 position = Vector2(-32, -7)
 target_scene = "uid://bcf4b7s1xycpc"
 targetMarker = "LoungeToHall"
+
+[editable path="Chef"]

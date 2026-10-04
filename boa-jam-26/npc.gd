@@ -5,6 +5,8 @@ var setDay = 2
 
 @export var dialogue = preload("res://Dialogue/Annie_Investigation.dialogue")
 @export var dialogue_title: String = "start"
+@export var interactionId: String = ""
+@export var one_time_only: bool = false
 @onready var prompt = $E
 
 var player_in_range = false

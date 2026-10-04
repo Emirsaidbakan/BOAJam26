@@ -139,7 +139,7 @@ do SceneManager.incrementCluesFound()
 	=> jeremy_door
 
 - Go to the living room
-	=> living_room
+	=> butler
 
 - Go back to the office
 
@@ -171,8 +171,9 @@ Driver: "John won't be here for long anyway."
 Annie: ...
 Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
+do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-=> leave_office
+=> END
 
 ~ mom_door
 Annie: ...
@@ -186,7 +187,7 @@ Annie: John is dead.
 Mother: ...
 Mother: What are you talking about?
 Annie: You killed him, didn't you?
-if inspected_papers:
+if SceneManager.flags["inspectedPapers"]:
 	Annie: You found out he lost shares in BluMax.
 	Annie: You fought with him about it.
 	Annie: You got angry and killed him, DIDN'T YOU?
@@ -246,8 +247,10 @@ Annie: He's not answering.
 Annie: I should check somewhere else.
 => leave_office
 
-~ living_room
-Annie: The living room.
+~ butler
+Annie: (The butler...)
+Annie: (He wasn't here when I first came here right?)
+Annie: (So he was here before I woke up?)
 Butler: Mrs. Dedd?
 Annie: I need to ask you something.
 Butler: Of course.
@@ -266,8 +269,9 @@ Butler: Mostly Fred.
 Annie: Why didn't anyone tell me about these?
 Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
+do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-=> leave_office
+=> END
 
 ~ dayTwo
 Annie: Ugh...what just happened?

@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cgp1nxfhxwi4p" path="res://Door.tscn" id="3_jq0fr"]
 [ext_resource type="Texture2D" uid="uid://d2n8j74rhagc2" path="res://art/Sideways desk and shelf (2).png" id="4_a8g86"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="6_7w07i"]
+[ext_resource type="PackedScene" uid="uid://dsq2rpbjj2sr5" path="res://NPC.tscn" id="8_8vqf6"]
+[ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="8_h8ag2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yok4s"]
 texture = ExtResource("2_o8ec2")
@@ -4010,3 +4012,32 @@ position = Vector2(23, -11)
 [node name="SideDoor" parent="." unique_id=2125966249 instance=ExtResource("6_7w07i")]
 position = Vector2(38, -38)
 target_scene = "uid://blfs4t8it75li"
+
+[node name="MotherRoom" parent="." unique_id=938960534 instance=ExtResource("8_h8ag2")]
+position = Vector2(-107, -104)
+dialogue_title = "mom_door"
+interactionId = ""
+one_time_only = true
+
+[node name="CollisionShape2D" parent="MotherRoom" index="0" unique_id=224680260]
+position = Vector2(3, -5)
+scale = Vector2(1.29, 1.29)
+
+[node name="Sprite2D" parent="MotherRoom" index="1" unique_id=2085290654]
+position = Vector2(7, -21)
+
+[node name="Driver" parent="." unique_id=1039506296 instance=ExtResource("8_8vqf6")]
+z_index = 3
+position = Vector2(-89, -18)
+dialogue_title = "driver"
+one_time_only = true
+
+[node name="CollisionShape2D" parent="Driver" index="0" unique_id=1056620778]
+scale = Vector2(1.715, 1.715)
+
+[node name="E" parent="Driver" index="1" unique_id=894843785]
+position = Vector2(1.7881393e-06, -29.999998)
+scale = Vector2(1.2777781, 1.2777781)
+
+[editable path="MotherRoom"]
+[editable path="Driver"]
