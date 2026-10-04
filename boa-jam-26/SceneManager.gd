@@ -132,7 +132,7 @@ func goodEnding() -> void:
 func badEnding() -> void:
 	change_room("res://BadEnd.tscn","BadEndingSpawn")
 
-func correct_guess() -> void:
+func correctGuess() -> void:
 	SceneManager.flags["goodEnding"] = true
 	change_room("res://cutscene.tscn", "CutsceneMarker")
 
