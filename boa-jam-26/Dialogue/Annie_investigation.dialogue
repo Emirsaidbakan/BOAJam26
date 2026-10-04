@@ -403,15 +403,11 @@ Annie: Wait. Is that mother in Fred's room I hear?
 		Annie: She lied to me.
 	do SceneManager.markDone("momFredOverheard")
 	do SceneManager.incrementCluesFound()
-	do removeInteractable()
-	=> END
-- Go downstairs
-    => leave_office
-
-~ mom_fred_choice
-Annie: Mom just left.
-- Talk to Fred
-    => fred
+	Annie: Mom just left.
+	- Talk to Fred
+	  => fred
+	- Go downstairs
+      => leave_office
 - Go downstairs
     => leave_office
 
@@ -467,6 +463,7 @@ Annie: Do you know anything else?
 Fred: No.
 Fred: I'm telling you everything I know.
 Annie: ...
+do removeInteractable()
 => END
 
 ~ crystal_passage 
