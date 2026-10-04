@@ -15,7 +15,8 @@ var flags: Dictionary = {
 	"talkedWithButler": false,
 	"talkedWithDriver": false,
 	"talkedWithMother": false,
-	"talkedWithCrystal": false
+	"talkedWithCrystal": false,
+	"enteredPassage": false
 }
 
 # Holds the name of the Marker2D node the player should spawn at

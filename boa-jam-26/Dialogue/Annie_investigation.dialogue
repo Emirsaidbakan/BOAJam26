@@ -17,7 +17,6 @@ Annie: I have the keys.
 Annie: John?
 Annie: JOHN! OH MY GOD...
 Annie: Oh my God...
-Annie: ...
 Annie: Someone killed him....
 Annie: But no one could have gotten into the house.
 Annie: The mansion is surrounded by cameras.
@@ -47,11 +46,11 @@ Annie: What should I examine first?
 	
 
 ~ body
-Annie: Blunt force trauma..
+Annie: Blunt force trauma.
 Annie: There's some strange white powder on his jeans.
 Annie: ...
 Annie: Drugs.
-Annie: Jeremy...
+Annie: Did Jeremy... ?
 Annie: There's not much else here.
 do SceneManager.incrementCluesFound()
 do removeInteractable()
@@ -68,7 +67,7 @@ do removeInteractable()
 => END
 
 ~ dirt
-Annie: There's dirt underneath the portrait.
+Annie: There's dirt near the bookshelf.
 Annie: Why would there be dirt here?
 Annie: Wait...
 Annie: There's a button.
@@ -268,6 +267,32 @@ Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
 do SceneManager.incrementCluesFound()
 => leave_office
+<<<<<<< Updated upstream
+=======
+
+~ dayTwo
+Annie: Ugh...what just happened?
+Annie: Did i fall asleep?
+Annie: When?
+Annie: {Time}...{DATE???}?
+Annie: I've gone back in time??
+Annie: How even...
+Annie: Actually this is good.
+Annie: I can use this extra time to investigate more.
+=> END
+
+~ dayThree
+Annie: Ugh...did it happen again?
+Annie: How? When?
+Annie: And why do I get the feeling that this is the last shot I'll get?
+Annie: 
+Annie: Same day...{Time}...
+Annie: I've gone even further back in time?
+Annie: How even...
+Annie: Actually this is good.
+Annie: I can use this extra time to investigate more.
+=> END
+>>>>>>> Stashed changes
 
 ~ suspect_choice
 Who does Annie suspect?
