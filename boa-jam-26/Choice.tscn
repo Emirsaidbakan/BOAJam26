@@ -12,3 +12,5 @@ offset_top = -2222.0
 offset_right = 2699.0
 offset_bottom = 1763.0
 texture = ExtResource("1_1tesx")
+
+[node name="ChoiceSpawn" type="Marker2D" parent="." unique_id=1649217806]

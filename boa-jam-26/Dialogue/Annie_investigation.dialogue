@@ -84,7 +84,7 @@ Annie: There's a button.
 	=> END
 
 ~ sleep
-Annie: I feel sleepy...
+Annie: I feel dizzy...
 => END
 
 ~ bed
@@ -268,9 +268,31 @@ Annie: I'll keep that in mind.
 do SceneManager.incrementCluesFound()
 => leave_office
 
+~ dayTwo
+Annie: Ugh...what just happened?
+Annie: Did i fall asleep?
+Annie: When?
+Annie: {Time}...{DATE???}?
+Annie: I've gone back in time??
+Annie: How even...
+Annie: Actually this is good.
+Annie: I can use this extra time to investigate more.
+=> END
+
+~ dayThree
+Annie: Ugh...did it happen again?
+Annie: How? When?
+Annie: And why do I get the feeling that this is the last shot I'll get?
+Annie: 
+Annie: Same day...{Time}...
+Annie: I've gone even further back in time?
+Annie: How even...
+Annie: Actually this is good.
+Annie: I can use this extra time to investigate more.
+=> END
+
 ~ suspect_choice
-Annie: I need to think.
-Annie: Who do I suspect?
+Who does Annie suspect?
 
 - Mom
 	Annie: Mom...
@@ -298,9 +320,9 @@ Annie: Who do I suspect?
 
 
 ~ wrong_suspect
-Annie: ...
-Annie: I need to sleep.
-do wrong_guess()
+...
+Annie: I should find more clues
+do SceneManager.wrongGuess()
 => END
 
 ~ correct_suspect

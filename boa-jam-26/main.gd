@@ -12,7 +12,12 @@ func _ready() -> void:
 	if SceneManager.flags["gameStart"] == true:
 		SceneManager.flags["gameStart"] = false
 		DialogueManager.show_dialogue_balloon(dialogueFile, "begin")
-
+	elif SceneManager.flags["day"] == 2:
+		SceneManager.loadDayTwo()
+		DialogueManager.show_dialogue_balloon(dialogueFile, "dayTwo")
+	elif SceneManager.flags["day"] == 3: 
+		SceneManager.loadDayThree()
+		DialogueManager.show_dialogue_balloon(dialogueFile, "dayTwo")
 
 func get_time_text() -> String:
 	var hour = int(time)

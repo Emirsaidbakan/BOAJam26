@@ -11,7 +11,7 @@ var flags: Dictionary = {
 	"inspectedPapers": false,
 	"dirtFound": false,
 	"inspectedSecretDoor": false,
-	"day": 0,
+	"day": 1,
 	"talkedWithButler": false,
 	"talkedWithDriver": false,
 	"talkedWithMother": false
@@ -85,15 +85,15 @@ func endDay() -> void:
 	sleep()
 	
 func sleep() -> void:
-	flags["sleep"] = true
 	DialogueManager.show_dialogue_balloon(mainDialogue, "sleep")
 	await DialogueManager.dialogue_ended
-	change_room("res://main.tscn", "DayEnd")
-	var door = get_tree().current_scene.get_node_or_null("SideDoor")
-	if door:
-		door.queue_free()
+	change_room("res://choice.tscn", "ChoiceSpawn")
 	
-	
+func wrongGuess() -> void:
+	if flags["day"] == 3:
+		change_room("res://killer.tscn", "BadEnd")
+	else:
+		change_room("res://main.tscn", "DayEnd")
 
 func change_room(scene_path: String, spawn_id: String) -> void:
 	if isChangingRoom:
