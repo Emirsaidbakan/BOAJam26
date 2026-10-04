@@ -3,6 +3,7 @@ extends Node
 signal interacted(id: String)
 var mainDialogue = preload("res://Dialogue/Annie_investigation.dialogue")
 var bookshelfSound: AudioStreamPlayer
+var knockSound: AudioStreamPlayer
 var flags: Dictionary = {
 	"gameStart": true,
 	"cluesFound": 0,
@@ -53,6 +54,14 @@ func _ready() -> void:
 	if ResourceLoader.exists("res://audio/sfx/room_transition.wav"):
 		doorSound.stream = load("res://audio/sfx/room_transition.wav")
 	add_child(doorSound)
+	
+	bookshelfSound = AudioStreamPlayer.new()
+	bookshelfSound.stream = load("res://audio/sfx/bookshelf_open.wav")
+	add_child(bookshelfSound)
+	
+	knockSound = AudioStreamPlayer.new()
+	knockSound.stream = load("res://door-knock-et-all.wav")
+	add_child(knockSound)
 
 	interacted.connect(_on_interacted)
 
@@ -163,6 +172,9 @@ func show_scene(path: String) -> void:
 
 	await catcher.pressed
 	layer.queue_free()
+	
+func playKnockSound() -> void:
+	knockSound.play()
 	
 func change_room(scene_path: String, spawn_id: String) -> void:
 	if isChangingRoom:

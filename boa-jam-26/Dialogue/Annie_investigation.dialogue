@@ -183,6 +183,7 @@ do makeUninteractable()
 ~ mom_door
 Annie: ...
 Annie: I should talk to Mom.
+do SceneManager.playKnockSound()
 Annie: *Knock knock.*
 Mother: What is it?
 Annie: Mom, what did you do?
@@ -218,6 +219,7 @@ do removeInteractable()
 
 ~ crystal_door
 Annie: I should talk to Crystal.
+do SceneManager.playKnockSound()
 Annie: *Knock knock.*
 Crystal: What happened?
 Annie: John is dead.
@@ -249,6 +251,7 @@ do removeInteractable()
 
 ~ jeremy_door
 Annie: Jeremy?
+do SceneManager.playKnockSound()
 Annie: *Knock knock.*
 Annie: Jeremy?
 Annie: ...
