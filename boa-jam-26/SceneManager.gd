@@ -10,7 +10,7 @@ var flags: Dictionary = {
 	"deadmanFound": false,
 	"inspectedPapers": false,
 	"dirtFound": false,
-	"secretPassageFirstTime": true,
+	"secretDoorFirstTime": true,
 	"day": 1,
 	"talkedWithButler": false,
 	"talkedWithDriver": false,
@@ -63,7 +63,7 @@ func _on_interacted(id: String) -> void:
 		"dirtFound":
 			flags["dirtFound"] = true
 		"secretDoorFirstTime":
-			flags["inspectedSecretDoor"] = true
+			flags["inspectedSecretDoor"] = false
 		"talkedWithButler": 
 			flags["talkedWithButler"] = true
 		"talkedWithDriver": 
