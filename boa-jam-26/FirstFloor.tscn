@@ -1,9 +1,13 @@
 [gd_scene format=4 uid="uid://d1ppn8xr8sx2q"]
 
+[ext_resource type="Script" uid="uid://c364vr1qnl23c" path="res://first_floor.gd" id="1_6hjxd"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="1_rq8ot"]
 [ext_resource type="Texture2D" uid="uid://bqkqxl5gfgtku" path="res://art/Doors/Door side version.png" id="2_sk5hu"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="3_jq3c7"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_jq3c7"]
+[ext_resource type="Script" uid="uid://bl840d38hmxa0" path="res://fredRoom.gd" id="5_kquve"]
+[ext_resource type="Resource" uid="uid://c8b7d8aob5cj2" path="res://Dialogue/Annie_investigation.dialogue" id="6_6hjxd"]
+[ext_resource type="Texture2D" uid="uid://c5ttl6o1j4p3u" path="res://art/E.png" id="6_83tg5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5hu"]
 texture = ExtResource("1_rq8ot")
@@ -6157,7 +6161,11 @@ texture = ExtResource("1_rq8ot")
 [sub_resource type="TileSet" id="TileSet_rdiip"]
 sources/0 = SubResource("TileSetAtlasSource_n2dfq")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hjxd"]
+radius = 18.027756
+
 [node name="FirstFloor" type="Node2D" unique_id=125318250]
+script = ExtResource("1_6hjxd")
 
 [node name="BackgroundLayer" type="TileMapLayer" parent="." unique_id=21250163]
 tile_map_data = PackedByteArray("AAABAPj/AAAEAA8AAAA=")
@@ -6217,3 +6225,17 @@ spawnDestination = "FirstFloorToBedroom"
 
 [node name="BedroomToFirstFloor" type="Marker2D" parent="." unique_id=925653147]
 position = Vector2(22, -8)
+
+[node name="fredRoom" type="Area2D" parent="." unique_id=1499538095]
+script = ExtResource("5_kquve")
+dialogue_resource = ExtResource("6_6hjxd")
+one_time_only = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fredRoom" unique_id=1769142353]
+position = Vector2(-106, -16)
+shape = SubResource("CircleShape2D_6hjxd")
+
+[node name="Sprite2D" type="Sprite2D" parent="fredRoom" unique_id=162780837]
+position = Vector2(-99, -36)
+scale = Vector2(1.1666666, 1.1666666)
+texture = ExtResource("6_83tg5")

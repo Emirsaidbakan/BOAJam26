@@ -40,8 +40,9 @@ func enable() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_in_range and event.is_action_pressed("interact"):
-		get_tree().get_first_node_in_group("player").freeze()
-		DialogueManager.show_dialogue_balloon(dialogue_resource, "jeremy_door", [self])
+		if SceneManager.flags["day"] == 2:
+			get_tree().get_first_node_in_group("player").freeze()
+			DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title, [self])
 		
 func removeInteractable() -> void:
 	queue_free()

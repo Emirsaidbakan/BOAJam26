@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7r261jc2mwh2" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="3_h2yge"]
-[ext_resource type="Resource" uid="uid://owe3se6tx5gw" path="res://Dialogue/Annie_investigation.dialogue" id="5_7mycd"]
+[ext_resource type="Resource" uid="uid://c8b7d8aob5cj2" path="res://Dialogue/Annie_investigation.dialogue" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dto372ki6d1ct" path="res://art/Beds.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://brjgsk0lud286" path="res://art/Doors/All door sides.png" id="7_5vw27"]
