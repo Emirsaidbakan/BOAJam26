@@ -1,6 +1,6 @@
 ~ begin
 Annie: Ugh....What the hell...?
-Annie: I slept horribly...
+Annie: 4:30 AM. I slept horribly...
 Annie: John?
 Annie: John, where are you?
 Annie: Is he working in his office again?
@@ -287,7 +287,7 @@ do makeUninteractable()
 Annie: Ugh...what just happened?
 Annie: Did i fall asleep?
 Annie: When?
-Annie: {Time}...{DATE???}?
+Annie: 3:30???
 Annie: I've gone back in time??
 Annie: How even...
 Annie: Actually this is good.
@@ -299,7 +299,7 @@ Annie: Ugh...did it happen again?
 Annie: How? When?
 Annie: And why do I get the feeling that this is the last shot I'll get?
 Annie: 
-Annie: Same day...{Time}...
+Annie: Same day...2:30...
 Annie: I've gone even further back in time?
 Annie: How even...
 Annie: Actually this is good.
