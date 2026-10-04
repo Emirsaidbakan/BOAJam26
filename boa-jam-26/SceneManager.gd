@@ -2,7 +2,7 @@
 extends Node
 signal interacted(id: String)
 var mainDialogue = preload("res://Dialogue/Annie_investigation.dialogue")
-
+var bookshelfSound: AudioStreamPlayer
 var flags: Dictionary = {
 	"gameStart": true,
 	"cluesFound": 0,
@@ -85,6 +85,7 @@ func markDone(id: String) -> void:
 func setDirtFound() -> void:
 	if not flags["dirtFound"]:
 		flags["dirtFound"] = true
+		bookshelfSound.play()
 		openSecretPassage()
 
 func showSuspects() -> void:
