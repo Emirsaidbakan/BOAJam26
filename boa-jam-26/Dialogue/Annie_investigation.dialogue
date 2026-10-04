@@ -17,6 +17,7 @@ Annie: I have the keys.
 Annie: John?
 Annie: JOHN! OH MY GOD...
 Annie: Oh my God...
+Annie: ...
 Annie: Someone killed him....
 Annie: But no one could have gotten into the house.
 Annie: The mansion is surrounded by cameras.
@@ -46,11 +47,11 @@ Annie: What should I examine first?
 	
 
 ~ body
-Annie: Blunt force trauma.
+Annie: Blunt force trauma..
 Annie: There's some strange white powder on his jeans.
 Annie: ...
 Annie: Drugs.
-Annie: Did Jeremy... ?
+Annie: Jeremy...
 Annie: There's not much else here.
 do SceneManager.incrementCluesFound()
 do removeInteractable()
@@ -62,12 +63,13 @@ Annie: He lost shares of one of the company's biggest stakeholders.
 Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
+do SceneManager.markDone("inspectedPapers")
 do SceneManager.incrementCluesFound()
 do removeInteractable()
 => END
 
 ~ dirt
-Annie: There's dirt near the bookshelf.
+Annie: There's dirt underneath the portrait.
 Annie: Why would there be dirt here?
 Annie: Wait...
 Annie: There's a button.
@@ -172,7 +174,7 @@ Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
 do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-do removeInteractable()
+do makeUninteractable()
 => END
 
 ~ mom_door
@@ -206,6 +208,7 @@ Mother: ...
 Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
+do SceneManager.markDone("talkedWithMother")
 do SceneManager.incrementCluesFound()
 => END
 
@@ -235,8 +238,9 @@ Crystal: ...
 Crystal: Mother told me.
 Annie: ...
 Crystal: Is that all?
+do SceneManager.markDone("talkedWithCrystal")
 do SceneManager.incrementCluesFound()
-=> leave_office
+=> END
 
 ~ jeremy_door
 Annie: Jeremy?
@@ -245,11 +249,12 @@ Annie: Jeremy?
 Annie: ...
 Annie: He's not answering.
 Annie: I should check somewhere else.
-=> leave_office
+=> END
 
 ~ butler
 Annie: (The butler...)
-Annie: (Was he here the whole time?)
+Annie: (He wasn't here when I first came here right?)
+Annie: (So he was here before I woke up?)
 Butler: Mrs. Dedd?
 Annie: I need to ask you something.
 Butler: Of course.
@@ -270,10 +275,8 @@ Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
 do SceneManager.markDone("talkedWithButler")
 do SceneManager.incrementCluesFound()
-do removeInteractable()
+do makeUninteractable()
 => END
-<<<<<<< Updated upstream
-=======
 
 ~ dayTwo
 Annie: Ugh...what just happened?
@@ -297,7 +300,6 @@ Annie: How even...
 Annie: Actually this is good.
 Annie: I can use this extra time to investigate more.
 => END
->>>>>>> Stashed changes
 
 ~ suspect_choice
 Who does Annie suspect?
@@ -329,7 +331,7 @@ Who does Annie suspect?
 
 ~ wrong_suspect
 ...
-That doesn't feel right...
+Annie: I should find more clues
 do SceneManager.wrongGuess()
 => END
 
