@@ -4046,7 +4046,7 @@ scale = Vector2(1.1666666, 1.1666666)
 
 [node name="JeremyRoom" parent="." unique_id=253099370 instance=ExtResource("8_h8ag2")]
 position = Vector2(-214, -208)
-dialogue_title = "mom_door"
+dialogue_title = "jeremy_door"
 interactionId = ""
 one_time_only = true
 

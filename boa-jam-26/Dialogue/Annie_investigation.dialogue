@@ -24,6 +24,7 @@ Annie: The mansion is surrounded by cameras.
 Annie: No one entered.
 Annie: No one left.
 Annie: Whoever did this was already inside..
+do SceneManager.show_scene("res://Records.tscn")
 Annie: I need to figure out what happened..
 Annie: The body is on the floor.
 Annie: There are papers spread across the desk.
@@ -62,7 +63,6 @@ Annie: He lost shares of one of the company's biggest stakeholders.
 Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
-do SceneManager.markDone("inspectedPapers")
 do SceneManager.incrementCluesFound()
 do removeInteractable()
 => END
@@ -139,7 +139,7 @@ do SceneManager.incrementCluesFound()
 	=> jeremy_door
 
 - Go to the living room
-	=> butler
+	=> living_room
 
 - Go back to the office
 
@@ -171,9 +171,8 @@ Driver: "John won't be here for long anyway."
 Annie: ...
 Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
-do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-=> END
+=> leave_office
 
 ~ mom_door
 Annie: ...
@@ -187,7 +186,7 @@ Annie: John is dead.
 Mother: ...
 Mother: What are you talking about?
 Annie: You killed him, didn't you?
-if SceneManager.flags["inspectedPapers"]:
+if inspected_papers:
 	Annie: You found out he lost shares in BluMax.
 	Annie: You fought with him about it.
 	Annie: You got angry and killed him, DIDN'T YOU?
@@ -207,7 +206,7 @@ Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
 do SceneManager.incrementCluesFound()
-=> END
+=> leave_office
 
 ~ crystal_door
 Annie: I should talk to Crystal.
@@ -236,7 +235,7 @@ Crystal: Mother told me.
 Annie: ...
 Crystal: Is that all?
 do SceneManager.incrementCluesFound()
-=> END
+=> leave_office
 
 ~ jeremy_door
 Annie: Jeremy?
@@ -245,12 +244,10 @@ Annie: Jeremy?
 Annie: ...
 Annie: He's not answering.
 Annie: I should check somewhere else.
-=> END
+=> leave_office
 
-~ butler
-Annie: (The butler...)
-Annie: (He wasn't here when I first came here right?)
-Annie: (So he was here before I woke up?)
+~ living_room
+Annie: The living room.
 Butler: Mrs. Dedd?
 Annie: I need to ask you something.
 Butler: Of course.
@@ -269,32 +266,8 @@ Butler: Mostly Fred.
 Annie: Why didn't anyone tell me about these?
 Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
-do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-=> END
-
-~ dayTwo
-Annie: Ugh...what just happened?
-Annie: Did i fall asleep?
-Annie: When?
-Annie: {Time}...{DATE???}?
-Annie: I've gone back in time??
-Annie: How even...
-Annie: Actually this is good.
-Annie: I can use this extra time to investigate more.
-=> END
-
-~ dayThree
-Annie: Ugh...did it happen again?
-Annie: How? When?
-Annie: And why do I get the feeling that this is the last shot I'll get?
-Annie: 
-Annie: Same day...{Time}...
-Annie: I've gone even further back in time?
-Annie: How even...
-Annie: Actually this is good.
-Annie: I can use this extra time to investigate more.
-=> END
+=> leave_office
 
 ~ suspect_choice
 Who does Annie suspect?
@@ -326,7 +299,7 @@ Who does Annie suspect?
 
 ~ wrong_suspect
 ...
-Annie: I should find more clues
+That doesn't feel right...
 do SceneManager.wrongGuess()
 => END
 

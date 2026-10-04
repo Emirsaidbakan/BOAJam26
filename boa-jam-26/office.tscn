@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="11_70x1r"]
 [ext_resource type="PackedScene" uid="uid://dc1nmibyihs6s" path="res://BackDoor.tscn" id="12_s0aar"]
 [ext_resource type="Script" uid="uid://c7excd5mhkb2i" path="res://dirt.gd" id="13_s0aar"]
+[ext_resource type="PackedScene" uid="uid://dryqvsvub7uvs" path="res://Records.tscn" id="14_gxl1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_g3mwp")
@@ -4919,6 +4920,12 @@ one_time_only = true
 [node name="CollisionShape2D" parent="Dirt/Interactable" index="0" unique_id=224680260]
 scale = Vector2(1.46, 1.46)
 
+[node name="Suspects" parent="." unique_id=775685755 instance=ExtResource("14_gxl1f")]
+visible = false
+position = Vector2(-212, -156.00002)
+scale = Vector2(0.385, 0.385)
+
 [editable path="DeadMan/Interactable"]
 [editable path="Papers"]
 [editable path="Dirt/Interactable"]
+[editable path="Suspects"]

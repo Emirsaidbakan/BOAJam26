@@ -14,9 +14,8 @@ var flags: Dictionary = {
 	"day": 1,
 	"talkedWithButler": false,
 	"talkedWithDriver": false,
-	"talkedWithMother": false
-	
-	
+	"talkedWithMother": false,
+	"talkedWithCrystal": false
 }
 
 # Holds the name of the Marker2D node the player should spawn at
@@ -74,6 +73,10 @@ func setDirtFound() -> void:
 	SceneManager.interacted.emit("dirtFound")
 	openSecretPassage()
 
+func showSuspects() -> void:
+	var suspects: Node2D = get_tree().current_scene.find_child("Suspects")
+	suspects.visible = true
+
 func openSecretPassage() -> void:
 	var DeskLayer: TileMapLayer = get_tree().current_scene.find_child("DeskLayer")
 	var secretDoorLayer: TileMapLayer = get_tree().current_scene.find_child("SecretDoorLayer")
@@ -105,6 +108,24 @@ func wrongGuess() -> void:
 	else:
 		change_room("res://main.tscn", "DayEnd")
 
+func show_scene(path: String) -> void:
+	var layer = CanvasLayer.new()
+	layer.layer = 110  # above the dialogue balloon (100), below your fade (120)
+	add_child(layer)
+
+	var content = load(path).instantiate()
+	layer.add_child(content)
+
+	# invisible full-screen button on top, just to catch the click
+	var catcher = Button.new()
+	catcher.flat = true
+	catcher.set_anchors_preset(Control.PRESET_FULL_RECT)
+	catcher.focus_mode = Control.FOCUS_NONE
+	layer.add_child(catcher)
+
+	await catcher.pressed
+	layer.queue_free()
+	
 func change_room(scene_path: String, spawn_id: String) -> void:
 	if isChangingRoom:
 		return
