@@ -4911,7 +4911,7 @@ tile_set = SubResource("TileSet_s0aar")
 script = ExtResource("13_s0aar")
 
 [node name="Interactable" parent="Dirt" unique_id=1717753903 instance=ExtResource("11_70x1r")]
-position = Vector2(-48, -91)
+position = Vector2(33, 73)
 dialogue_title = "dirt"
 interactionId = "dirtFound"
 one_time_only = true

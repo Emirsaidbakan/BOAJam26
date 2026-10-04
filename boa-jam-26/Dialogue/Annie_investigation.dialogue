@@ -207,7 +207,7 @@ Annie: Almost like you were already awake.
 Mother: I told you. I was asleep.
 Annie: ...
 do SceneManager.incrementCluesFound()
-=> leave_office
+=> END
 
 ~ crystal_door
 Annie: I should talk to Crystal.
@@ -236,7 +236,7 @@ Crystal: Mother told me.
 Annie: ...
 Crystal: Is that all?
 do SceneManager.incrementCluesFound()
-=> leave_office
+=> END
 
 ~ jeremy_door
 Annie: Jeremy?
@@ -245,7 +245,7 @@ Annie: Jeremy?
 Annie: ...
 Annie: He's not answering.
 Annie: I should check somewhere else.
-=> leave_office
+=> END
 
 ~ butler
 Annie: (The butler...)

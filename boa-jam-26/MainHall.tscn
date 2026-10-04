@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bcf4b7s1xycpc"]
 
 [ext_resource type="PackedScene" uid="uid://dxgw8akkdlm4a" path="res://player.tscn" id="1_c5cu3"]
+[ext_resource type="Script" uid="uid://5day426pwyws" path="res://main_hall.gd" id="1_jq0fr"]
 [ext_resource type="Texture2D" uid="uid://bqkqxl5gfgtku" path="res://art/Doors/Door side version.png" id="2_7w07i"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="2_o8ec2"]
 [ext_resource type="Texture2D" uid="uid://brjgsk0lud286" path="res://art/Doors/All door sides.png" id="3_a8g86"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="6_7w07i"]
 [ext_resource type="PackedScene" uid="uid://dsq2rpbjj2sr5" path="res://NPC.tscn" id="8_8vqf6"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="8_h8ag2"]
+[ext_resource type="Texture2D" uid="uid://btd6vmf1n07ie" path="res://art/Characters/Driver.png" id="10_k8clq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yok4s"]
 texture = ExtResource("2_o8ec2")
@@ -3962,6 +3964,7 @@ physics_layer_0/collision_layer = 8
 sources/0 = SubResource("TileSetAtlasSource_a8g86")
 
 [node name="MainHall" type="Node2D" unique_id=730938243]
+script = ExtResource("1_jq0fr")
 
 [node name="WallLayer" type="TileMapLayer" parent="." unique_id=1230534890]
 tile_map_data = PackedByteArray("AAD5//X/AQAAAAAAAAD6//X/AQAAAAAAAAD7//X/AQAAAAAAAAD7//b/AQAAAAEAAAAFAPX/AAAAAAEAAAAFAPb/AAAAAAIAAAAGAPX/AAABAAEAAAAGAPb/AAABAAIAAAAHAPX/AAACAAEAAAAHAPb/AAACAAIAAAD5//T/AQAAAAAAAAD6//T/AQAAAAAAAAD7//T/AQAAAAAAAAAFAPT/AAAAAAAAAAAGAPT/AAABAAAAAAAHAPT/AAACAAAAAAD8//T/AQAAAAAAAAD8//X/AQAAAAAAAAD8//b/AQAAAAEAAAD9//T/AQAAAAAAAAD+//T/AQAAAAAAAAD+//X/AQAAAAAAAAD+//b/AQAAAAEAAAD///T/AQAAAAAAAAD///X/AQAAAAAAAAD///b/AQAAAAEAAAAAAPT/AQAAAAAAAAAAAPX/AQAAAAAAAAAAAPb/AQAAAAEAAAABAPT/AQAAAAAAAAABAPX/AQAAAAAAAAABAPb/AQAAAAEAAAD9//X/AQAAAAAAAAD9//b/AQAAAAEAAAD5//b/AQAAAAEAAAD6//b/AQAAAAEAAAA=")
@@ -4026,6 +4029,34 @@ scale = Vector2(1.29, 1.29)
 [node name="Sprite2D" parent="MotherRoom" index="1" unique_id=2085290654]
 position = Vector2(7, -21)
 
+[node name="SisterRoom" parent="." unique_id=746035503 instance=ExtResource("8_h8ag2")]
+position = Vector2(-214, -208)
+dialogue_title = "crystal_door"
+interactionId = ""
+one_time_only = true
+
+[node name="CollisionShape2D" parent="SisterRoom" index="0" unique_id=224680260]
+position = Vector2(113, 184)
+scale = Vector2(1.555, 1.555)
+
+[node name="Sprite2D" parent="SisterRoom" index="1" unique_id=2085290654]
+z_index = 5
+position = Vector2(117, 166)
+scale = Vector2(1.1666666, 1.1666666)
+
+[node name="JeremyRoom" parent="." unique_id=253099370 instance=ExtResource("8_h8ag2")]
+position = Vector2(-214, -208)
+dialogue_title = "mom_door"
+interactionId = ""
+one_time_only = true
+
+[node name="CollisionShape2D" parent="JeremyRoom" index="0" unique_id=224680260]
+position = Vector2(237, 98)
+scale = Vector2(1.29, 1.29)
+
+[node name="Sprite2D" parent="JeremyRoom" index="1" unique_id=2085290654]
+position = Vector2(233, 82)
+
 [node name="Driver" parent="." unique_id=1039506296 instance=ExtResource("8_8vqf6")]
 z_index = 3
 position = Vector2(-89, -18)
@@ -4033,11 +4064,19 @@ dialogue_title = "driver"
 one_time_only = true
 
 [node name="CollisionShape2D" parent="Driver" index="0" unique_id=1056620778]
+position = Vector2(90, 40.75)
 scale = Vector2(1.715, 1.715)
 
 [node name="E" parent="Driver" index="1" unique_id=894843785]
-position = Vector2(1.7881393e-06, -29.999998)
+position = Vector2(90, 10.750002)
 scale = Vector2(1.2777781, 1.2777781)
 
+[node name="Character" parent="Driver" index="2" unique_id=197033535]
+position = Vector2(90, 35.75)
+scale = Vector2(1.625, 1.625)
+texture = ExtResource("10_k8clq")
+
 [editable path="MotherRoom"]
+[editable path="SisterRoom"]
+[editable path="JeremyRoom"]
 [editable path="Driver"]
