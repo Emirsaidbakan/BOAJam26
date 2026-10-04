@@ -170,8 +170,10 @@ Driver: "John won't be here for long anyway."
 Annie: ...
 Annie: That's an interesting thing to say.
 Driver: I'm only telling you what I heard.
+do SceneManager.markDone("talkedWithDriver")
 do SceneManager.incrementCluesFound()
-=> leave_office
+do removeInteractable()
+=> END
 
 ~ mom_door
 Annie: ...
@@ -266,7 +268,9 @@ Butler: Mostly Fred.
 Annie: Why didn't anyone tell me about these?
 Butler: I suppose no one thought it was important.
 Annie: I'll keep that in mind.
+do SceneManager.markDone("talkedWithButler")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 <<<<<<< Updated upstream
 =======

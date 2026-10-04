@@ -4771,6 +4771,8 @@ tile_set = SubResource("TileSet_kaihy")
 z_index = 3
 position = Vector2(-48, -114)
 dialogue_title = "butler"
+interactionId = "talkedWithButler"
+one_time_only = true
 
 [node name="CollisionShape2D" parent="Chef" index="0" unique_id=1056620778]
 scale = Vector2(1.715, 1.715)

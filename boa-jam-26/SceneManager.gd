@@ -63,6 +63,12 @@ func _on_interacted(id: String) -> void:
 			flags["dirtFound"] = true
 		"secretDoorFirstTime":
 			flags["inspectedSecretDoor"] = true
+		"talkedWithButler": 
+			flags["talkedWithButler"] = false
+		"talkedWithDriver": 
+			flags["talkedWithDriver"] = false
+		"talkedWithMother": 
+			flags["talkedWithMother"] = false
 		_:
 			print("Unknown interactable: ", id)
 			
