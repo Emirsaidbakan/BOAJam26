@@ -36,7 +36,9 @@ func _on_dialogue_ended(_resource = null) -> void:
 	
 		
 func _physics_process(delta: float) -> void:
-	var inputDirection = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+	var inputDirection = Vector2.ZERO
+	if GameState.can_move():
+		inputDirection = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	velocity = inputDirection * speed
 	move_and_slide()
 	

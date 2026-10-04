@@ -110,7 +110,8 @@ func change_room(scene_path: String, spawn_id: String) -> void:
 	spawnDestination = spawn_id
 	get_tree().change_scene_to_file(scene_path)
 	await get_tree().process_frame # wait one frame so the new room is loaded
-
+	GameState.in_dialogue = false
+	
 	# Fade back in
 	tween = create_tween()
 	tween.tween_property(fadeRect, "color:a", 0.0, fadeTime)

@@ -28,8 +28,8 @@ func _on_body_exited(body: Node2D) -> void:
 		prompt.hide()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if player_in_range and event.is_action_pressed("interact"):
-		get_tree().get_first_node_in_group("player").freeze()
+	if player_in_range and not GameState.in_dialogue and event.is_action_pressed("interact"):
+		get_viewport().set_input_as_handled()
 		DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_title, [self])
 		
 func removeInteractable() -> void:

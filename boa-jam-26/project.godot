@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneManager="*uid://d4kmya2311m80"
+GameState="*uid://ba3oo080pdyn2"
 
 [dialogue_manager]
 
