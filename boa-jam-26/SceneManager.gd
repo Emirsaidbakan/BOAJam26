@@ -20,7 +20,9 @@ var flags: Dictionary = {
 	"diaryFound": false,
 	"momFredOverheard": false,
 	"jeremyLeaving": false,
-	"crystalPassage": false
+	"crystalPassage": false,
+	"badEnding": false,
+	"goodEnding": false,
 }
 
 # Holds the name of the Marker2D node the player should spawn at
@@ -117,12 +119,22 @@ func sleep() -> void:
 	
 func wrongGuess() -> void:
 	if flags["day"] == 4:
-		change_room("res://killer.tscn", "BadEnd")
+		SceneManager.flags["badEnding"] = true
+		change_room("res://cutscene.tscn", "CutsceneMarker")
 	else:
 		change_room("res://main.tscn", "DayEnd")
 		
+
+# UI scenes		
+func goodEnding() -> void:
+	change_room("res://GoodEnd","GoodEndingSpawn")
+	
+func badEnding() -> void:
+	change_room("res://BadEnd","BadEndingSpawn")
+
 func correct_guess() -> void:
-	change_room("res://killer.tscn", "GoodEnd")
+	SceneManager.flags["goodEnding"] = true
+	change_room("res://cutscene.tscn", "CutsceneMarker")
 
 func show_scene(path: String) -> void:
 	var layer = CanvasLayer.new()

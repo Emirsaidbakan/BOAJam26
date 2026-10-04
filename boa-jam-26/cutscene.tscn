@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://didvxlyrh5nuq"]
+
+[ext_resource type="Script" uid="uid://bxd7tmoo5dtnj" path="res://cutscene.gd" id="1_ye7fo"]
+
+[node name="Cutscene" type="Node2D" unique_id=465564582]
+script = ExtResource("1_ye7fo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1202842045]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=400696942]
+offset_left = -7321.0
+offset_top = -7321.0
+offset_right = 8853.0
+offset_bottom = 8853.0
+color = Color(0, 0, 0, 1)
+
+[node name="CutsceneMarker" type="Marker2D" parent="." unique_id=1216635721]

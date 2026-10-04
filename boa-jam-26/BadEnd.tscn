@@ -22,7 +22,7 @@ offset_bottom = 470.0
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_htemk")
-text = "Game Over"
+text = "Bad Ending"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=506169899]
 layout_mode = 2
@@ -31,3 +31,6 @@ size_flags_vertical = 4
 theme = SubResource("Theme_14cdr")
 text = "Main Menu"
 script = ExtResource("2_ktuaw")
+
+[node name="BadEndingSpawm" type="Marker2D" parent="." unique_id=1679376656]
+position = Vector2(530, 616)

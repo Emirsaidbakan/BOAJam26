@@ -363,7 +363,7 @@ do SceneManager.wrongGuess()
 ~ correct_suspect
 Annie: Crystal...
 Annie: I need to find out what happened.
-do correct_guess()
+do SceneManager.correctGuess()
 => END
 
 ~ jeremy_leaving
@@ -499,12 +499,15 @@ Annie: Crystal was hiding it.
 Annie: Why?
 => END
 
-~ save_john
+~ good_ending
 Annie: 1:30 AM.
 Annie: John.
 Annie: I know what's going to happen.
 Annie: I need to get to his office.
 Annie: NOW.
+=> END
+
+~ save_john
 Annie: John!
 Annie: Open the door!
 John: Annie?
@@ -519,10 +522,11 @@ John: ...
 John: Okay.
 Annie: We need to get out of here.
 Annie: Right now.
+do SceneManager.GoodEnding()
 
 => save_ending
 
-~ death_john
+~ bad_cutscene
 Annie: 1:30 AM.
 Annie: John...
 Annie: I know what's about to happen.
@@ -533,6 +537,8 @@ Annie: The office...
 Annie: It's happening.
 Annie: I need to get there.
 Annie: NOW.
+
+~ death_john
 Annie: John?!
 Annie: Oh my God.
 Annie: Crystal...
@@ -544,7 +550,8 @@ Crystal: You weren't supposed to know.
 Annie: Stay away from me!
 Crystal: I'm sorry, Annie.
 Annie: CRYSTAL!
-=> death_ending
+do SceneManager.badEnding()
+=> END
 
 ~ save_ending
 Annie: ...
