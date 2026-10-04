@@ -13,6 +13,7 @@ func _ready() -> void:
 	prompt.hide()
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	
 	if one_time_only and SceneManager.flags.get(interactionId, false):
 		queue_free()
 
@@ -25,6 +26,17 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
 		prompt.hide()
+		
+func disable() -> void:
+	hide()
+	set_deferred("monitoring", false)
+	set_process_unhandled_input(false)
+	
+func enable() -> void:
+	show()
+	prompt.hide()
+	set_deferred("monitoring", true)
+	set_process_unhandled_input(true)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if player_in_range and event.is_action_pressed("interact"):

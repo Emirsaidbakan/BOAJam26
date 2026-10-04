@@ -6,6 +6,16 @@ extends Area2D
 func _ready() -> void:
 	# Automatically connects the body_entered signal when the scene starts
 	body_entered.connect(_on_body_entered)
+	
+func disable() -> void:
+	hide()
+	set_deferred("monitoring", false)
+	set_process_unhandled_input(false)
+	
+func enable() -> void:
+	show()
+	set_deferred("monitoring", true)
+	set_process_unhandled_input(true)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and target_scene != "":

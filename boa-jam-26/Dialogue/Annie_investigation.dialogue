@@ -62,6 +62,7 @@ Annie: He lost shares of one of the company's biggest stakeholders.
 Annie: ...
 Annie: Mom.
 Annie: I remember them fighting yesterday about another stakeholder.
+do SceneManager.markDone("inspectedPapers")
 do SceneManager.incrementCluesFound()
 do removeInteractable()
 => END

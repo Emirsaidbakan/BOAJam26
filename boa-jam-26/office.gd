@@ -8,6 +8,13 @@ func _ready() -> void:
 		SceneManager.flags["deadmanFound"] = true
 		DialogueManager.show_dialogue_balloon(deadmanDialogue, "bodyFound")
 		get_tree().get_first_node_in_group("player").freeze()
+		
+	if not SceneManager.flags["dirtFound"]:
+		$SecretDoor.hide()
+		$SecretDoor.set_deferred("monitoring", false)
+		$SecretDoor.set_process_unhandled_input(false)
+	else:
+		SceneManager.openSecretPassage()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -8,6 +8,7 @@ radius = 13.0
 
 [node name="Npc" type="Area2D" unique_id=1039506296]
 script = ExtResource("1_twre2")
+dialogue_title = "chef"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1056620778]
 shape = SubResource("CircleShape2D_u1jv5")

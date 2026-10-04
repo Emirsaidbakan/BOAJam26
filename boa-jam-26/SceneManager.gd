@@ -57,7 +57,8 @@ func _on_interacted(id: String) -> void:
 				flags["deadmanFound"] = true
 				print("Found the body")
 		"inspectedPapers":
-			flags["inspectedPapers"] = true
+			if not flags["inspectedPapers"]:
+				flags["inspectedPapers"] = true
 		"dirtFound":
 			flags["dirtFound"] = true
 		"secretDoorFirstTime":
@@ -65,13 +66,22 @@ func _on_interacted(id: String) -> void:
 		_:
 			print("Unknown interactable: ", id)
 			
+			
+func markDone(id: String) -> void:
+	flags[id] = true
+	
 func setDirtFound() -> void:
 	SceneManager.interacted.emit("dirtFound")
-	#openSecretPassage()
-	#
-#func openSecretPassage() -> void:
-	#"res://office.tscn"
+	openSecretPassage()
+
+func openSecretPassage() -> void:
+	var DeskLayer: TileMapLayer = get_tree().current_scene.find_child("DeskLayer")
+	var secretDoorLayer: TileMapLayer = get_tree().current_scene.find_child("SecretDoorLayer")
+	var secretDoor: Area2D = get_tree().current_scene.find_child("SecretDoor")
 	
+	DeskLayer.global_position.x -= 20
+	secretDoorLayer.show()
+	secretDoor.enable()
 	
 func incrementCluesFound():
 	flags["cluesFound"] += 1

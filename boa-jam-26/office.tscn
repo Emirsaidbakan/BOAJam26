@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2n8j74rhagc2" path="res://art/Sideways desk and shelf (2).png" id="4_4i814"]
 [ext_resource type="PackedScene" uid="uid://iw868dnubm5w" path="res://Side Door.tscn" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="11_70x1r"]
-[ext_resource type="Resource" uid="uid://dc7b5iy5w6lo7" path="res://Dialogue/Annie_investigation.dialogue" id="12_knsl5"]
+[ext_resource type="PackedScene" uid="uid://dc1nmibyihs6s" path="res://BackDoor.tscn" id="12_s0aar"]
 [ext_resource type="Script" uid="uid://c7excd5mhkb2i" path="res://dirt.gd" id="13_s0aar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
@@ -4865,8 +4865,8 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Interactable" parent="DeadMan" unique_id=938960534 instance=ExtResource("11_70x1r")]
 position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
-dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "body"
+interactionId = "deadmanFound"
 one_time_only = true
 
 [node name="Sprite2D" parent="DeadMan/Interactable" index="1" unique_id=2085290654]
@@ -4876,7 +4876,6 @@ scale = Vector2(0.6, 0.6)
 [node name="Papers" parent="." unique_id=430687061 instance=ExtResource("11_70x1r")]
 position = Vector2(-16.000004, -3.8146973e-06)
 scale = Vector2(1.735, 1.735)
-dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "papers"
 interactionId = "inspectedPapers"
 one_time_only = true
@@ -4892,12 +4891,17 @@ scale = Vector2(0.6, 0.6)
 [node name="SecretToOffice" type="Marker2D" parent="." unique_id=811533682]
 position = Vector2(31, 61)
 
-[node name="SecretDoor" type="TileMapLayer" parent="." unique_id=1457112217]
+[node name="SecretDoorLayer" type="TileMapLayer" parent="." unique_id=1457112217]
 visible = false
 position = Vector2(-3.81, -12.48)
 scale = Vector2(1.155, 1.155)
 tile_map_data = PackedByteArray("AAABAAQAAAADAAEAAAACAAQAAAADAAEAAAA=")
 tile_set = SubResource("TileSet_4ltcl")
+
+[node name="SecretDoor" parent="." unique_id=1527188288 instance=ExtResource("12_s0aar")]
+position = Vector2(49, 56)
+target_scene = "uid://by4ce6slghmj5"
+targetMarker = "OfficeToSecret"
 
 [node name="DeskLayer" type="TileMapLayer" parent="." unique_id=404244667]
 tile_map_data = PackedByteArray("AAABAAQAAQAAAAYAAEACAAQAAQAAAAcAAEA=")
@@ -4908,7 +4912,6 @@ script = ExtResource("13_s0aar")
 
 [node name="Interactable" parent="Dirt" unique_id=1717753903 instance=ExtResource("11_70x1r")]
 position = Vector2(-48, -91)
-dialogue_resource = ExtResource("12_knsl5")
 dialogue_title = "dirt"
 interactionId = "dirtFound"
 one_time_only = true
