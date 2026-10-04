@@ -451,21 +451,23 @@ Annie: ...
 => END
 
 ~ crystal_passage 
-Annie: I should check the passage again. 
-Annie: ... Annie: Wait. 
-Annie: Someone's coming. 
+Annie: Wait. 
+Annie: Someone's here. 
 Annie: Crystal?! 
 Annie: What is she doing here? 
-Annie: I need to hide. 
+...
 Crystal: No one should find this. 
-Annie: What is she hiding? 
+Annie: (What is she hiding?)
 Crystal: ... 
 Crystal: There. 
-Annie: She's putting something behind that loose stone. 
+Annie: She's putting something behind. 
 Annie: She's leaving. 
 Annie: ... 
 Annie: I need to see what she hid. 
-=> hidden_diary
+do SceneManager.markDone("crystalPassage")
+do SceneManager.incrementCluesFound()
+do removeInteractable()
+=> END
 
 ~ hidden_diary 
 Annie: A diary. 
@@ -475,6 +477,7 @@ Annie: ...
 Annie: This is the same diary I found before. 
 Annie: Crystal was hiding it. 
 Annie: Why?
+=> END
 
 ~ save_john
 Annie: 1:30 AM.

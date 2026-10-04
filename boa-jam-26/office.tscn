@@ -4807,11 +4807,14 @@ texture = ExtResource("3_lcnwv")
 0:4/0 = 0
 0:5/0 = 0
 0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:8/0 = 0
 0:9/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s0aar"]
+physics_layer_0/collision_layer = 8
 sources/0 = SubResource("TileSetAtlasSource_n1y4y")
 sources/1 = SubResource("TileSetAtlasSource_m8tx5")
 
@@ -4905,7 +4908,7 @@ target_scene = "uid://by4ce6slghmj5"
 targetMarker = "OfficeToSecret"
 
 [node name="DeskLayer" type="TileMapLayer" parent="." unique_id=404244667]
-tile_map_data = PackedByteArray("AAABAAQAAQAAAAYAAEACAAQAAQAAAAcAAEA=")
+tile_map_data = PackedByteArray("AAACAAQAAQAAAAcAAEABAAQAAQAAAAYAAEA=")
 tile_set = SubResource("TileSet_s0aar")
 
 [node name="Dirt" type="Area2D" parent="." unique_id=825593907]
