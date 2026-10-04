@@ -127,10 +127,10 @@ func wrongGuess() -> void:
 
 # UI scenes		
 func goodEnding() -> void:
-	change_room("res://GoodEnd","GoodEndingSpawn")
+	change_room("res://GoodEnd.tscn","GoodEndingSpawn")
 	
 func badEnding() -> void:
-	change_room("res://BadEnd","BadEndingSpawn")
+	change_room("res://BadEnd.tscn","BadEndingSpawn")
 
 func correct_guess() -> void:
 	SceneManager.flags["goodEnding"] = true

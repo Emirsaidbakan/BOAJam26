@@ -509,12 +509,9 @@ Annie: NOW.
 
 ~ save_john
 Annie: John!
-Annie: Open the door!
 John: Annie?
-Annie: Don't argue with me. Just open the door!
-John: What the hell is going on?
-Annie: Crystal is coming.
-John: Crystal?
+Annie: Crystal is coming. We need to leave immedietly!
+John: What the hell is going on? Crystal?
 Annie: She's going to kill you.
 John: What?!
 Annie: Please, just trust me.
@@ -522,7 +519,8 @@ John: ...
 John: Okay.
 Annie: We need to get out of here.
 Annie: Right now.
-do SceneManager.GoodEnding()
+John: Alright let's go.
+do SceneManager.goodEnding()
 
 => save_ending
 
