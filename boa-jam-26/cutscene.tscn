@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://didvxlyrh5nuq"]
 
 [ext_resource type="Script" uid="uid://bxd7tmoo5dtnj" path="res://cutscene.gd" id="1_ye7fo"]
-[ext_resource type="Resource" uid="uid://cfkwdm4rvbixs" path="res://Dialogue/Annie_Investigation.dialogue" id="2_ix241"]
+[ext_resource type="Resource" uid="uid://csmk8o0jc2lov" path="res://Dialogue/Annie_Investigation.dialogue" id="2_ix241"]
 
 [node name="Cutscene" type="Node2D" unique_id=465564582]
 script = ExtResource("1_ye7fo")

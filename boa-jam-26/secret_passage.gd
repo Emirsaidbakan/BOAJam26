@@ -11,7 +11,6 @@ func _ready() -> void:
 		DialogueManager.show_dialogue_balloon(dialogue, "passage")
 	if SceneManager.flags["day"] == 3:
 		$Sister.enable();
-		$Diary.disable();
 		
 
 

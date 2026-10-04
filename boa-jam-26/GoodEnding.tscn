@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxq3inff4fe12" path="res://good_ending.gd" id="1_a2xps"]
 [ext_resource type="Texture2D" uid="uid://d0yxq0783fo8s" path="res://art/atlas_16x.png" id="1_srv3h"]
-[ext_resource type="Resource" uid="uid://c8b7d8aob5cj2" path="res://Dialogue/Annie_investigation.dialogue" id="2_8sfvw"]
+[ext_resource type="Resource" uid="uid://csmk8o0jc2lov" path="res://Dialogue/Annie_investigation.dialogue" id="2_8sfvw"]
 [ext_resource type="Texture2D" uid="uid://ide2a26wv0i6" path="res://art/ScatteredPapers.png" id="3_8sfvw"]
 [ext_resource type="Texture2D" uid="uid://0vhmrd6xrhh7" path="res://art/tiles and items.png" id="4_n4rpy"]
 [ext_resource type="Texture2D" uid="uid://bltmxo3ioekgc" path="res://art/Sideways desk and shelf.png" id="5_oko6a"]
@@ -4819,7 +4819,8 @@ position = Vector2(-70, 1)
 tile_map_data = PackedByteArray("AAACAAQAAQAAAAcAAEABAAQAAQAAAAYAAEA=")
 tile_set = SubResource("TileSet_78iub")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=29165198]
+[node name="CorrectChoiceMarker" type="Marker2D" parent="." unique_id=29165198]
+position = Vector2(-54, 4)
 
 [node name="John" type="Sprite2D" parent="." unique_id=830809975]
 position = Vector2(27, -2.0000002)
