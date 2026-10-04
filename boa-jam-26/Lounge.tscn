@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dc1nmibyihs6s" path="res://BackDoor.tscn" id="6_7c6af"]
 [ext_resource type="PackedScene" uid="uid://dsq2rpbjj2sr5" path="res://NPC.tscn" id="6_yq10c"]
 [ext_resource type="Texture2D" uid="uid://cpc3bxcwt3e3k" path="res://art/Characters/Chef.png" id="7_jkjta"]
+[ext_resource type="AudioStream" uid="uid://d2c8hva03wvp7" path="res://Background-Music-et-all.wav" id="12_7od7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7c6af"]
 texture = ExtResource("1_rbvun")
@@ -4799,5 +4800,10 @@ spawnDestination = "LoungeToStairs"
 position = Vector2(-32, -7)
 target_scene = "uid://bcf4b7s1xycpc"
 targetMarker = "LoungeToHall"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=78492796]
+stream = ExtResource("12_7od7o")
+volume_db = 1.553
+autoplay = true
 
 [editable path="Chef"]

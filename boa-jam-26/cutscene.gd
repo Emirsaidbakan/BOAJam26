@@ -1,7 +1,7 @@
 extends Node2D
 @export var dialogue_resource: DialogueResource
 @export var dialogue_title: String = "start"
-bad_cutscene
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

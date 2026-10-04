@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dc1nmibyihs6s" path="res://BackDoor.tscn" id="12_s0aar"]
 [ext_resource type="Script" uid="uid://c7excd5mhkb2i" path="res://dirt.gd" id="13_s0aar"]
 [ext_resource type="PackedScene" uid="uid://dryqvsvub7uvs" path="res://Records.tscn" id="14_gxl1f"]
+[ext_resource type="AudioStream" uid="uid://d2c8hva03wvp7" path="res://Background-Music-et-all.wav" id="15_2uxut"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_g3mwp")
@@ -4927,6 +4928,11 @@ scale = Vector2(1.46, 1.46)
 visible = false
 position = Vector2(-212, -156.00002)
 scale = Vector2(0.385, 0.385)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=565816986]
+stream = ExtResource("15_2uxut")
+volume_db = 1.553
+autoplay = true
 
 [editable path="DeadMan/Interactable"]
 [editable path="Papers"]

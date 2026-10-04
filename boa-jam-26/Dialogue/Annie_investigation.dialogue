@@ -69,13 +69,13 @@ do removeInteractable()
 => END
 
 ~ dirt
-Annie: There's dirt underneath the portrait.
+Annie: There's dirt underneath the bookshelf.
 Annie: Why would there be dirt here?
 Annie: Wait...
 Annie: There's a button.
 - Press the button
 	Annie: ...
-	Annie: The portrait moved.
+	Annie: The bookshelf moved.
 	Annie: There's a passage behind it.
 	do SceneManager.setDirtFound()
 	do SceneManager.incrementCluesFound()

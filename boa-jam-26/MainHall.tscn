@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://btd6vmf1n07ie" path="res://art/Characters/Driver.png" id="10_k8clq"]
 [ext_resource type="Script" uid="uid://7agm1y5lkbtf" path="res://jeremyDoor.gd" id="10_tqvt1"]
 [ext_resource type="Texture2D" uid="uid://21biguech6e7" path="res://art/Characters/BestFriend.png" id="13_4r2qe"]
+[ext_resource type="AudioStream" uid="uid://d2c8hva03wvp7" path="res://Background-Music-et-all.wav" id="14_vkvin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yok4s"]
 texture = ExtResource("2_o8ec2")
@@ -4094,6 +4095,11 @@ z_index = 2
 position = Vector2(-38.000004, -46.000004)
 scale = Vector2(1.5859376, 1.5859376)
 texture = ExtResource("13_4r2qe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=853667546]
+stream = ExtResource("14_vkvin")
+volume_db = 1.553
+autoplay = true
 
 [editable path="MotherRoom"]
 [editable path="SisterRoom"]
