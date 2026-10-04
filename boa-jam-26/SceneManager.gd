@@ -4,6 +4,7 @@ signal interacted(id: String)
 var mainDialogue = preload("res://Dialogue/Annie_investigation.dialogue")
 var bookshelfSound: AudioStreamPlayer
 var knockSound: AudioStreamPlayer
+var deathSound: AudioStreamPlayer
 var flags: Dictionary = {
 	"gameStart": true,
 	"cluesFound": 0,
@@ -55,6 +56,10 @@ func _ready() -> void:
 		doorSound.stream = load("res://audio/sfx/room_transition.wav")
 	add_child(doorSound)
 	
+	deathSound = AudioStreamPlayer.new()
+	deathSound.stream = load("res://death-by-bludgeoning-et-all.wav")
+	add_child(deathSound)
+	
 	bookshelfSound = AudioStreamPlayer.new()
 	bookshelfSound.stream = load("res://audio/sfx/bookshelf_open.wav")
 	add_child(bookshelfSound)
@@ -96,6 +101,9 @@ func setDirtFound() -> void:
 		flags["dirtFound"] = true
 		bookshelfSound.play()
 		openSecretPassage()
+		
+func playDeathSound() -> void:
+	deathSound.play()
 
 func showSuspects() -> void:
 	var suspects: Node2D = get_tree().current_scene.find_child("Suspects")

@@ -550,6 +550,7 @@ Crystal: You weren't supposed to know.
 Annie: Stay away from me!
 Crystal: I'm sorry, Annie.
 Annie: CRYSTAL!
+do SceneManager.playDeathSound()
 do SceneManager.badEnding()
 => END
 
