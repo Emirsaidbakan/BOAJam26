@@ -106,23 +106,25 @@ Annie: Someone could have used this to get in or out without using the office do
 ~ passage
 Annie: It's completely dark... 
 Annie: I can barely see where I'm going. 
-Annie: Wait. 
-Annie: What's that? 
-Annie: A diary. 
+=> END
+
+=> diary 
+
+~ diary 
+Annie: A diary?
 Annie: The cover says... 
 Annie: "Dedd." 
 Annie: Someone in the family wrote this. 
 Annie: I should read it. 
-=> diary 
-
-~ diary 
 Annie: ... 
 Annie: They're furious with John. 
 Annie: They blame him for what happened to them. 
 Annie: ... 
 Annie: They lost their job. 
 Annie: Whoever wrote this had a serious reason to hate him.
+do SceneManager.markDone("diaryFound")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END 
 
 ~ leave_office
@@ -210,6 +212,7 @@ Mother: I told you. I was asleep.
 Annie: ...
 do SceneManager.markDone("talkedWithMother")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ crystal_door
@@ -240,6 +243,7 @@ Annie: ...
 Crystal: Is that all?
 do SceneManager.markDone("talkedWithCrystal")
 do SceneManager.incrementCluesFound()
+do removeInteractable()
 => END
 
 ~ jeremy_door

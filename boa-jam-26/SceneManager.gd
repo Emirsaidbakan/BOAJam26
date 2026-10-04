@@ -10,13 +10,14 @@ var flags: Dictionary = {
 	"deadmanFound": false,
 	"inspectedPapers": false,
 	"dirtFound": false,
-	"inspectedSecretDoor": false,
+	"secretPassageFirstTime": true,
 	"day": 1,
 	"talkedWithButler": false,
 	"talkedWithDriver": false,
 	"talkedWithMother": false,
 	"talkedWithCrystal": false,
-	"enteredPassage": false
+	"enteredPassage": false,
+	"diaryFound": false
 }
 
 # Holds the name of the Marker2D node the player should spawn at
@@ -112,7 +113,7 @@ func sleep() -> void:
 	change_room("res://choice.tscn", "ChoiceSpawn")
 	
 func wrongGuess() -> void:
-	if flags["day"] == 3:
+	if flags["day"] == 4:
 		change_room("res://killer.tscn", "BadEnd")
 	else:
 		change_room("res://main.tscn", "DayEnd")

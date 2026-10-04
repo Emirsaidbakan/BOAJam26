@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dsq2rpbjj2sr5" path="res://NPC.tscn" id="8_8vqf6"]
 [ext_resource type="PackedScene" uid="uid://2o1h85svhm00" path="res://Interactable.tscn" id="8_h8ag2"]
 [ext_resource type="Texture2D" uid="uid://btd6vmf1n07ie" path="res://art/Characters/Driver.png" id="10_k8clq"]
+[ext_resource type="Script" uid="uid://7agm1y5lkbtf" path="res://jeremyDoor.gd" id="10_tqvt1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yok4s"]
 texture = ExtResource("2_o8ec2")
@@ -4019,7 +4020,6 @@ target_scene = "uid://blfs4t8it75li"
 [node name="MotherRoom" parent="." unique_id=938960534 instance=ExtResource("8_h8ag2")]
 position = Vector2(-107, -104)
 dialogue_title = "mom_door"
-interactionId = ""
 one_time_only = true
 
 [node name="CollisionShape2D" parent="MotherRoom" index="0" unique_id=224680260]
@@ -4032,7 +4032,6 @@ position = Vector2(7, -21)
 [node name="SisterRoom" parent="." unique_id=746035503 instance=ExtResource("8_h8ag2")]
 position = Vector2(-214, -208)
 dialogue_title = "crystal_door"
-interactionId = ""
 one_time_only = true
 
 [node name="CollisionShape2D" parent="SisterRoom" index="0" unique_id=224680260]
@@ -4046,9 +4045,7 @@ scale = Vector2(1.1666666, 1.1666666)
 
 [node name="JeremyRoom" parent="." unique_id=253099370 instance=ExtResource("8_h8ag2")]
 position = Vector2(-214, -208)
-dialogue_title = "jeremy_door"
-interactionId = ""
-one_time_only = true
+script = ExtResource("10_tqvt1")
 
 [node name="CollisionShape2D" parent="JeremyRoom" index="0" unique_id=224680260]
 position = Vector2(237, 98)

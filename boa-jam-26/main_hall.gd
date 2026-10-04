@@ -5,6 +5,8 @@ extends Node2D
 func _ready() -> void:
 	if not SceneManager.flags["deadmanFound"]:
 		$Driver.disable()
+		$MotherRoom.disable()
+		$SisterRoom.disable()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

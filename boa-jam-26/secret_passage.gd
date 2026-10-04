@@ -1,0 +1,14 @@
+extends Node2D
+@export var dialogue = preload("res://Dialogue/Annie_investigation.dialogue")
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	if SceneManager.flags["secretPassageFirstTime"]:
+		SceneManager.flags["secretPassageFirstTime"] = false
+		DialogueManager.show_dialogue_balloon(dialogue, "passage")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
