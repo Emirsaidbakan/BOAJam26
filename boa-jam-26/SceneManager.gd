@@ -120,6 +120,9 @@ func wrongGuess() -> void:
 		change_room("res://killer.tscn", "BadEnd")
 	else:
 		change_room("res://main.tscn", "DayEnd")
+		
+func correct_guess() -> void:
+	change_room("res://killer.tscn", "GoodEnd")
 
 func show_scene(path: String) -> void:
 	var layer = CanvasLayer.new()
