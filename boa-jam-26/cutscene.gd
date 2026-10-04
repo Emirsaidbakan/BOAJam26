@@ -1,14 +1,12 @@
 extends Node2D
 @export var dialogue_resource: DialogueResource
-@export var dialogue_title: String = "start"
-bad_cutscene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if SceneManager.flags["badEnding"]:
-		DialogueManager.show_dialogue_balloon(DialogueResource, "bad_cutscene")
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "bad_cutscene")
 	elif SceneManager.flags["goodEnding"]:
-		DialogueManager.show_dialogue_balloon(DialogueResource, "good_cutscene")
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "good_cutscene")
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

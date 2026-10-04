@@ -334,7 +334,6 @@ Who does Annie suspect?
 	=> wrong_suspect
 
 - Crystal
-	Annie: Crystal...
 	=> correct_suspect
 
 - Jeremy
@@ -362,7 +361,7 @@ do SceneManager.wrongGuess()
 
 ~ correct_suspect
 Annie: Crystal...
-Annie: I need to find out what happened.
+Annie: She did it didn't she....I need to find out what happened.
 do SceneManager.correctGuess()
 => END
 

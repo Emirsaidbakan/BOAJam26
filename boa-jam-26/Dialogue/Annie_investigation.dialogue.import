@@ -3,13 +3,13 @@
 importer="dialogue_manager"
 importer_version=18
 type="Resource"
-uid="uid://c8b7d8aob5cj2"
-path="res://.godot/imported/Annie_investigation.dialogue-6cbb133d0428261172cc26e930e1e1ce.tres"
+uid="uid://cfkwdm4rvbixs"
+path="res://.godot/imported/Annie_Investigation.dialogue-0ea8da26f43edb073d5c6f6a5a222242.tres"
 
 [deps]
 
-source_file="res://Dialogue/Annie_investigation.dialogue"
-dest_files=["res://.godot/imported/Annie_investigation.dialogue-6cbb133d0428261172cc26e930e1e1ce.tres"]
+source_file="res://Dialogue/Annie_Investigation.dialogue"
+dest_files=["res://.godot/imported/Annie_Investigation.dialogue-0ea8da26f43edb073d5c6f6a5a222242.tres"]
 
 [params]
 
